@@ -1,19 +1,69 @@
-/*Esto es un little example*/
 
-typefed struct{
-    int id; //identificador del espasio
-    char* name; //nombre del spasio
-    char* desc; //description
-    int light_on; //luces
-    int neigh[4];  //vecinitos
-    int locked[4]; //caminos bloqueaos por vacas
-} space
+#ifndef space_H
+#define space_H
+
+#include "types.h"
 
 
-getID(space*s);
-char* name(space*s);    //komo me iamo
-char* desc(space*s);   //Dame una descripcion
-int canIsee(space*s);  //Puedo ver???
-int move(space*s,int status); //Permite moverse en una direccion(o no)
-int go(space*s, int dir); // -1 no space. -2 space locked, >=0 indica el id dell espacio al que vamos
-int locked(space*s, int dir, int slot); //
+/*typedef struct{
+    int coord x;
+    int coord y;
+    char entity;
+} Space_entity;*/
+
+
+typedef struct _Space Space;
+
+Space* Space_ini();
+Space** Space_ini_array(int tamanio);
+Status Space_obliterate(Space* s);
+
+    /*Identification*/
+    
+Status Space_setID(Space*s, int id);
+int Space_getID(Space*s);
+
+Status Space_setLight(Space*s, Bool l);
+Bool Space_getLight(Space*s);
+
+Status Space_setName(Space*s, char* name);
+char* Space_getName(Space*s);
+
+Status Space_setDesc(Space*s, char* desc);
+char* Space_getDesc(Space*s);
+
+Status Space_setIsLocked(Space*s, Bool b);
+Bool Space_getIsLocked(Space*s);
+
+    /*Adjointed rooms*/
+    
+Status Space_setNeighRoom(Space*s1, Space*s2, Move m);
+Space* Space_getNeighRoom(Space*s, Move m);
+
+    /*Map*/
+    
+Status Space_setHeigh(Space*s, int h);
+int Space_getHeigh(Space*s);
+
+Status Space_setWidth(Space*s, int w);
+int Space_getWidth(Space*s);
+
+Status Space_setMap(Space*s, char* mapName);
+Status Space_drawMap(Space*s);
+
+    /*Helpful function*/
+    
+Status Space_setAll(Space*s, int id, Bool lights, char* name, char* desc, Bool isLock, int heigh, int width);
+
+    /*Move*/
+    
+Status Space_move(Space*s, Move m);
+
+    /*Space_entity*/
+    
+/*Status Space_entitySet(int coordX, int coordY, char entity);*/
+
+
+
+
+#endif
