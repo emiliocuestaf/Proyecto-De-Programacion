@@ -21,7 +21,7 @@ struct _Space{
     Bool locked; /* if the room is locked->TRUE*/   
     
     /*Adjointed rooms*/
-    struct _Space* neigh[4];  /*id of neigh rooms*/
+    int* neigh[4];  /*id of neigh rooms*/
 
     /*Map*/
     int heigh;
@@ -131,7 +131,7 @@ Status Space_setName(Space*s, char* name){
     if(!(s->name))
         return ERROR;
     
-    strcpy(s->name, name);
+    strcpy(s->name, name); 
     
     return OK;
 }
@@ -185,40 +185,34 @@ Bool Space_getIsLocked(Space*s){
 
     /*Adjointed rooms*/
     
-Status Space_setNeighRoom(Space*s1, Space*s2, Move m){
+Status Space_setNeighRoom(Space*s1, int idSpace2, Move m){
     Move aux;
     
-    if(s1 == NULL || s2 == NULL || m < 0 || m > 4)
+    if(s1 == NULL || m < 0 || m > 4)
+        return ERROR;
+    
+    s1->neigh[m] = idSpace2;
+
+    return OK;
+    
+}
+
+Status Space_setAllNeigh(Space* s, int id[]){
+    Move m;
+    
+    if (s =0 NULL)
         return ERROR;
         
-    s1->neigh[m] = s2;
-    
-    /*Miramos que vecino es s1 con respecto a s2*/
-    
-    switch(m){
-        case(up):
-           aux = down;
-            break;
-            
-        case(down):
-            aux= up;
-            break;
-            
-        case(left):
-            aux = right;
-            break;
-            
-        default:
-            aux = left;
-    }
-    
-    s2->neigh[aux] = s1;
+   for(m=1; m <= 4 ; m++){
+       if (Space_setNeighRoom(s, id[m-1], m) == ERROR)
+        return ERROR;
+   }     
     
     return OK;
     
 }
-Space* Space_getNeighRoom(Space*s, Move m){
-    if(s == NULL || s->neigh[m] == NULL)
+int Space_getNeighRoom(Space*s, Move m){
+    if(s == NULL || s->neigh[m] == 0)
         return NULL;
     return s->neigh[m];
 }
@@ -253,8 +247,19 @@ int Space_getWidth(Space*s){
     return s->width;
 }
 
-Status Space_setMap(Space*s, char* mapName);
-Status Space_drawMap(Space*s);
+Status Space_setMap(Space*s, char** map){
+    
+    if (s == NULL || map == NULL)
+        return ERROR;
+        
+    s->map = map;
+    
+    return OK;
+    
+}
+
+
+/*Status Space_drawMap(Space*s);*/
 
     /*Helpful function*/
     

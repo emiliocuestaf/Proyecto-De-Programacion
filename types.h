@@ -1,5 +1,5 @@
-#ifndef TYPES
-    #define TYPES
+#ifndef TYPES_H
+    #define TYPES_H
 
 typedef enum {OK = 1, ERROR = 0} Status;
 

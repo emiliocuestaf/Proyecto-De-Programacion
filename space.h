@@ -37,8 +37,9 @@ Bool Space_getIsLocked(Space*s);
 
     /*Adjointed rooms*/
     
-Status Space_setNeighRoom(Space*s1, Space*s2, Move m);
-Space* Space_getNeighRoom(Space*s, Move m);
+Status Space_setNeighRoom(Space*s1, int idSpace2, Move m);
+Status Space_setAllNeigh(Space* s, int id[]);
+int Space_getNeighRoom(Space*s, Move m);
 
     /*Map*/
     
@@ -48,7 +49,7 @@ int Space_getHeigh(Space*s);
 Status Space_setWidth(Space*s, int w);
 int Space_getWidth(Space*s);
 
-Status Space_setMap(Space*s, char* mapName);
+Status Space_setMap(Space*s, char** map);
 Status Space_drawMap(Space*s);
 
     /*Helpful function*/

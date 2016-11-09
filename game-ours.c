@@ -1,33 +1,187 @@
+#include <stdio.h>
+#include <assert.h>
+#include <string.h>
+#include <types.h>
+#include <file.h>
+#include "lineread.h"
 
-char*** maps_ini(char *fname){
+
+
+Space**  game_readSpace(char *fname/*, int * nspaces*/){
+  
   FILE *fp = fopen(fname, "r");
   
   char *buf;
   int i,j;
   
+  /* *nspaces = atoi(buf = fgetll(fp));*/
   int nmaps = atoi(buf = fgetll(fp));
   
-  char*** maps = (char***)malloc(nmaps*sizeof(char**));
+  Space ** spaces = Space_ini_array (nmaps/* *nspaces*/);
   
+  assert(spaces);
+  
+  char maps*** = (char***) malloc (nmaps/* *nspaces*/ * sizeof(char**));
+
   assert(maps);
-  
   int bdrow = atoi(buf = fgetll(fp));  
   int bdcol = atoi(buf = fgetll(fp));  
   
   
-  for (i=0; i < nmaps; i++){
-    maps**[i] = (char**) malloc (bdrow*sizeof(char*));
+  for (i=0; i < nmaps/* *nspaces*/; i++){
+    spaces*[i] = Space_ini();
+    assert(spaces[i]);
+      
+    int id = atoi(buf = fgetll(fp));
+    if(id != i){
+      printf("ESTAMOS HACIENDO ALGO MAL EN LOS MAPAS LOKO");
+      
+      for(; i <= 0 ; i--){
+        Space_obliterate(spaces*[i]);
+      }
+      
+      return NULL;
+      
+    }
+    /*Luces*/
+    char *name = fgetll(fp);
+    char *desc = fgetll(fp);
+    int locked = atoi(buf = fgetll(fp));
+    
+    if (Space_setAll(spaces*[i], id, /*luces*/, name, desc, locked, bdrow, bdcol) == ERROR){
+      for(; i <= 0 ; i--){
+        Space_obliterate(spaces*[i]);
+      }
+      
+      return NULL;
+    }
+    int j;
+    int neighs[4];
+    
+    for (j = 0; j < 4; j++){
+      neighs[j] = atoi(buf = fgetll(fp));
+    } 
+    
+    if (Space_setAllNeigh(spaces*[i], neighs) == ERROR){
+      
+      for(; i <= 0 ; i--){
+        Space_obliterate(spaces*[i]);
+      }
+      
+      return NULL;
+    }
+    
+    char maps**[i] = (char**) malloc (bdrow*sizeof(char*));
     assert(maps[i]);
     
     for (int i=0; i<bdrow; i++) {
-    map[i] = fgetll(fp);
+      maps[i] = fgetll(fp);
+    }
+    
+    if (Space_setMap(spaces*[i], maps**[i]) == ERROR){
+      
+      for(; i <= 0 ; i--){
+        Space_obliterate(spaces*[i]);
+      }
+      
+      return NULL;      
     }
     
   }
   
+  free (maps);
+  
   return maps;
 }
 
+
+Object ** game_readObject(char * file, /* int * nobjects*/){
+  
+  FILE *fp = fopen(file, "r");
+  assert(fp);
+  
+  char *buf;
+  int numaux;
+  int i;
+  Object **objs;
+  
+  /* *nobjects = atoi(buf = fgetll(fp));*/
+  int nobjects = atoi(buf = fgetll(fp));
+  
+  objs = (Object **) malloc(nobjects /* *nobjects*/ * sizeof(objs[0]));
+  assert(objs);
+  for(i = 0; i < nobjects/* *nobjects*/; i++){
+    objs[i] = Object_ini();
+    assert(objs[i]);
+    
+    buf = fgetll(fp);
+    Object_setname(objs[i], buf);/*Control de errores???*/
+    numaux = atoi(buf = fgetll(fp));
+    Object_setid(objs[i], numaux);/*Control de errores???*/
+    numaux = atoi(buf = fgetll(fp));
+    Object_setlocation(objs[i], numaux);/*Control de errores???*/
+    numaux = atoi(buf = fgetll(fp));
+    Object_setcoordinatex(objs[i], numaux);/*Control de errores???*/
+    numaux = atoi(buf = fgetll(fp));
+    Object_setcoordinatey(objs[i], numaux);/*Control de errores???*/
+    buf = fgetll(fp);
+    Object_setdescription(objs[i], buf);/*Control de errores???*/
+    buf = fgetll(fp);
+    Object_setsymbol(objs[i], buf[0]);/*Control de errores???*/
+  }  
+  buf = fgetll(fp);
+  if(buf != EOF) return NULL;
+  
+  return objs;
+}
+
+Npc ** game_readNpc(char * file, /* *numnpc*/){
+  
+  FILE *fp = fopen(file, "r");
+  assert(fp);
+  
+  char *buf;
+  int numaux;
+  int i;
+  Npc **npcs;
+  
+  /* *numnpc = atoi(buf = fgetll(fp));*/
+  int numnpc = atoi(buf = fgetll(fp));
+  
+  npcs = (Npc **) malloc(numnpc /* *numnpc*/ * sizeof(npcs[0]));
+  assert(npcs);
+  for(i = 0; i < numnpc /* *numnpc*/; i++){
+    npcs[i] = Npc_ini();
+    assert(objs[i]);
+    
+    buf = fgetll(fp);
+    Npc_setname(npcs[i], buf);/*Control de errores???*/
+    numaux = atoi(buf = fgetll(fp));
+    Npc_setid(npcsi], numaux);/*Control de errores???*/
+    numaux = atoi(buf = fgetll(fp));
+    Npc_setlocation(npcs[i], numaux);/*Control de errores???*/
+    numaux = atoi(buf = fgetll(fp));
+    Npc_setcoordinatex(npcs[i], numaux);/*Control de errores???*/
+    numaux = atoi(buf = fgetll(fp));
+    Npc_setcoordinatey(npcs[i], numaux);/*Control de errores???*/
+    buf = fgetll(fp);
+    Npc_setdescription1(npcs[i], buf);/*Control de errores???*/
+    buf = fgetll(fp);
+    Npc_setdescription2(npcs[i], buf);/*Control de errores???*/
+    buf = fgetll(fp);
+    Npc_setdescription3(npcs[i], buf);/*Control de errores???*/
+    buf = fgetll(fp);
+    Npc_setdescription4(npcs[i], buf);/*Control de errores???*/
+    buf = fgetll(fp);
+    Npc_setdescription5(npcs[i], buf);/*Control de errores???*/
+    buf = fgetll(fp);
+    Npc_setsymbol(npcs[i], buf[0]);/*Control de errores???*/
+  }  
+  buf = fgetll(fp);
+  if(buf != EOF) return NULL;
+  
+  return npcs;
+}
 
 
 /*

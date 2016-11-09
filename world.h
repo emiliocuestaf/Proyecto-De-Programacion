@@ -57,7 +57,7 @@ void World_Obliterate(world * w);
 /*                                                
 /* Returns: World* with its information                         
 /***************************************************/
-World * World_Create(char * worldfile);
+World * World_create(char * objectfile, char * npcfile, char * spacefile);
 Player * World_get_player(World * w);
 Space * World_get_space(World * w, int s_id);
 Object * World_get_object(World * w, int o_id);

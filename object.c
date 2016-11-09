@@ -15,7 +15,7 @@ struct _Object {
     int locat; // If -1 the player owns the object, otherwise the number is the space where the objects is. -2=not defined 
     int coord[2]; //(-1,-1)=not defined
     char* descr;
-    int power; //Indicator of usefulness
+    char symbol; //Indicator of usefulness
 };
 
 //Initialization of the structure Object
@@ -28,9 +28,8 @@ Object* Object_ini(){
     o->id=-1;
     o->locat=-2;
     o->coord=(-2,-2);
-    o->quant=0;
     o->descr=NULL;
-    o->power=0;
+    o->symbol= 'o'; //susceptible de cambio !!!!!!!!!!!!!!!
     
     return o;
     
@@ -120,7 +119,7 @@ Status Object_setcoordinatex(Object* o, int c1){
     assert(c1>=-1);
     
     o->coord[0]=c1;
-    return OK
+    return OK;
 }
 
 
@@ -130,7 +129,7 @@ Status Object_setcoordinatey(Object* o, int c2){
     assert(c2>=-1);
     
     o->coord[1]=c2;
-    return OK
+    return OK;
 }
 
 
@@ -177,19 +176,19 @@ char* Object_getdescription(Object* o){
 
 
 //Sets objects power
-Status Object_setpower(Object* o, int pw){
+Status Object_setsymbol(Object* o, char sym){
     
     assert(o!=NULL);
     
-    o->power=pw;
+    o->symbol=sym;
     return OK;
 }
 //Gets objects power
-int Object_getpower(Object* o){
+char Object_getsymbol(Object* o){
         
     assert(o!=NULL);
     
-    return o->power;
+    return o->symbol;
 }
 
 //Copies an object
@@ -201,7 +200,7 @@ Object* Object_copy(Object* o1){
     o2=Object_ini();
     if(!o2) return NULL;
     
-    if(object_setname(o2, o1->name)==ERR){
+    if(Object_setname(o2, o1->name)==ERR){
         return NULL;
     }
     
@@ -215,7 +214,7 @@ Object* Object_copy(Object* o1){
         return NULL;
     }
     
-    Object_setpower(o2, o1->power);
+    Object_setsymbol(o2, o1->symbol);
 
 
     return o2;

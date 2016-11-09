@@ -9,6 +9,23 @@ typedef struct{
     char * name;
     dfunk f;
 }assoc;
+/*esta es la que se rellena desde fichero:*/
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!RARO dos formatos?
+typedef struct {
+char *cmd;
+char *internal;
+int  n_msg;
+char **msg;
+} ext_cmd;
+
+typedef struct {
+ext_cmd **e_lst;  /* The list with the "normal" commands... */
+int     ext_no;   /* ...and the number of elements in it    */
+ext_cmd *error;   /* The "special" error command            */
+assoc **i_lst;  /* List with associations between internal commands and functions */
+int     int_no;   /* and the number of elements it contains (0 at the beginning) */
+int     int_max;  /* The number of pointers i_lst that are actually allocated    */
+} CoP;
 struct _cop{
     int n_assoc;
     assoc **a;

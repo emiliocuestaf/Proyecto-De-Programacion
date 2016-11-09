@@ -69,7 +69,7 @@ char* Object_getname(Object* o);
 /*                                                
 /* Returns: ERR or OK                           
 /***************************************************/
-Status Object_setID(Object* o, int id);
+Status Object_setid(Object* o, int id);
 
 /***************************************************/
 /* Function: object_getid  Fecha: 15-10-2016     
@@ -80,7 +80,7 @@ Status Object_setID(Object* o, int id);
 /*                                                
 /* Returns: int with the id of the object or -1 if it has not been asigned yet                           
 /***************************************************/
-int Object_getID(Object* o);
+int Object_getid(Object* o);
 
 /***************************************************/
 /* Function: object_setlocation  Fecha: 15-10-2016     
@@ -183,7 +183,7 @@ char* Object_getdescription(Object* o);
 /*                                                
 /* Returns: ERR or OK                          
 /***************************************************/
-Status Object_setpower(Object* o, int pw);
+Status Object_setsymbol(Object* o, char symbol);
 
 
 /***************************************************/
@@ -195,7 +195,7 @@ Status Object_setpower(Object* o, int pw);
 /*                                                
 /* Returns: int with objects power (can be negative)                           
 /***************************************************/
-int Object_getpower(Object* o);
+char Object_getsymbol(Object* o);
 
 
 /***************************************************/
@@ -219,8 +219,7 @@ Object* Object_copy(Object* o1);
 /*            -char* descr!=NULL -int quant>=0 -int power                                     
 /* Returns: Object* with a new object :D                         
 /***************************************************/
-Object* Object_create(char*name, int id, int location, int cx, int cy, char* descr, 
-                        int power);
+Object* Object_create(char*name, int id, int location, int cx, int cy, char* descr, int power);
 
 
 #endif
