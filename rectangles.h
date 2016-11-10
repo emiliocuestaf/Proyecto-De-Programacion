@@ -3,7 +3,8 @@
 #define RECTANGLE_H
  
 #include <stdio.h>
-#include <stdlib.h>    
+#include <stdlib.h>  
+#include "types.h"  
   
 
 typedef struct _Rectangle Rectangle;

@@ -1,9 +1,11 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <assert.h>
 #include <string.h>
-#include <types.h>
-#include <file.h>
+#include "types.h"
 #include "lineread.h"
+#include "space.h"
+#include "object.h"
 
 
 
@@ -21,7 +23,7 @@ Space**  game_readSpace(char *fname/*, int * nspaces*/){
   
   assert(spaces);
   
-  char maps*** = (char***) malloc (nmaps/* *nspaces*/ * sizeof(char**));
+  char*** maps= (char***) malloc (nmaps * sizeof(char**)); /* quiza nspaces en vez de nmaps*/
 
   assert(maps);
   int bdrow = atoi(buf = fgetll(fp));  
@@ -29,7 +31,7 @@ Space**  game_readSpace(char *fname/*, int * nspaces*/){
   
   
   for (i=0; i < nmaps/* *nspaces*/; i++){
-    spaces*[i] = Space_ini();
+    spaces[i] = Space_ini();
     assert(spaces[i]);
       
     int id = atoi(buf = fgetll(fp));
@@ -37,7 +39,7 @@ Space**  game_readSpace(char *fname/*, int * nspaces*/){
       printf("ESTAMOS HACIENDO ALGO MAL EN LOS MAPAS LOKO");
       
       for(; i <= 0 ; i--){
-        Space_obliterate(spaces*[i]);
+        Space_obliterate(spaces[i]);
       }
       
       return NULL;
@@ -48,9 +50,9 @@ Space**  game_readSpace(char *fname/*, int * nspaces*/){
     char *desc = fgetll(fp);
     int locked = atoi(buf = fgetll(fp));
     
-    if (Space_setAll(spaces*[i], id, /*luces*/, name, desc, locked, bdrow, bdcol) == ERROR){
+    if (Space_setAll(spaces[i], id, 0 /*pa que compile, aqui va la luz*/, name, desc, locked, bdrow, bdcol) == ERROR){
       for(; i <= 0 ; i--){
-        Space_obliterate(spaces*[i]);
+        Space_obliterate(spaces[i]);
       }
       
       return NULL;
@@ -62,10 +64,10 @@ Space**  game_readSpace(char *fname/*, int * nspaces*/){
       neighs[j] = atoi(buf = fgetll(fp));
     } 
     
-    if (Space_setAllNeigh(spaces*[i], neighs) == ERROR){
+    if (Space_setAllNeigh(spaces[i], neighs) == ERROR){
       
       for(; i <= 0 ; i--){
-        Space_obliterate(spaces*[i]);
+        Space_obliterate(spaces[i]);
       }
       
       return NULL;
@@ -78,10 +80,10 @@ Space**  game_readSpace(char *fname/*, int * nspaces*/){
       maps[i] = fgetll(fp);
     }
     
-    if (Space_setMap(spaces*[i], maps**[i]) == ERROR){
+    if (Space_setMap(spaces[i], maps**[i]) == ERROR){
       
       for(; i <= 0 ; i--){
-        Space_obliterate(spaces*[i]);
+        Space_obliterate(spaces[i]);
       }
       
       return NULL;      

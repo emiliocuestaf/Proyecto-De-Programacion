@@ -5,7 +5,7 @@
 #include "types.h"
 #include "space.h"
 #include "object.h"
-
+#include "npc.h"
 /*#define NDEBUG*/
 
     
@@ -19,11 +19,11 @@ struct _Npc {
     char* descr3; // Colonel
     char* descr4; // Lieutenant
     char* descr5; // Captain
-    char symbol; //Indicator of usefulness
+    char symbol; 
 };
 
 //Initialization of the structure Npc
-Npc* Npc_ini();{
+Npc* Npc_ini(){
     Npc * n;
     
     n = (Npc *)malloc(sizeof(Npc));
@@ -31,7 +31,8 @@ Npc* Npc_ini();{
     n->name=NULL;
     n->id=-1;
     n->locat=-2;
-    n->coord=(-2,-2);
+    n->coord[0]=-1;
+    n->coord[1]=-1;
     n->descr1=NULL;
     n->descr2=NULL;
     n->descr3=NULL;
@@ -39,8 +40,7 @@ Npc* Npc_ini();{
     n->descr5=NULL;
     n->symbol= 'p'; //susceptible de cambioo !!!!!!!!!!!!!!!!! 
     
-    return o;
-    
+    return n;
     
 }
 //Objects memory freeing
@@ -79,7 +79,7 @@ Status Npc_setname(Npc * n, char * name){
     }
     
     n->name=(char*)malloc(sizeof(char)*(strlen(name)+1));
-    if(!n->name) return ERR;
+    if(!n->name) return ERROR;
     
     strcpy(n->name,name);
     
@@ -173,8 +173,8 @@ Status Npc_setdescription1(Npc * n, char * descr){
     
     if(n->descr1) free(n->descr1);
     
-    n->descr1=(char*)malloc(sizeof(char)*(strlen(descr)+1))
-    if(!n->descr1) return ERR;
+    n->descr1=(char*)malloc(sizeof(char)*(strlen(descr)+1));
+    if(!n->descr1) return ERROR;
     
     strcpy(n->descr1,descr);
 
@@ -187,8 +187,8 @@ Status Npc_setdescription2(Npc * n, char * descr){
     
     if(n->descr2) free(n->descr2);
     
-    n->descr2=(char*)malloc(sizeof(char)*(strlen(descr)+1))
-    if(!n->descr2) return ERR;
+    n->descr2=(char*)malloc(sizeof(char)*(strlen(descr)+1));
+    if(!n->descr2) return ERROR;
     
     strcpy(n->descr2,descr);
 
@@ -201,8 +201,8 @@ Status Npc_setdescription3(Npc * n, char * descr){
     
     if(n->descr3) free(n->descr3);
     
-    n->descr3=(char*)malloc(sizeof(char)*(strlen(descr)+1))
-    if(!n->descr3) return ERR;
+    n->descr3=(char*)malloc(sizeof(char)*(strlen(descr)+1));
+    if(!n->descr3) return ERROR;
     
     strcpy(n->descr3,descr);
 
@@ -215,8 +215,8 @@ Status Npc_setdescription4(Npc * n, char * descr){
     
     if(n->descr4) free(n->descr4);
     
-    n->descr4=(char*)malloc(sizeof(char)*(strlen(descr)+1))
-    if(!n->descr4) return ERR;
+    n->descr4=(char*)malloc(sizeof(char)*(strlen(descr)+1));
+    if(!n->descr4) return ERROR;
     
     strcpy(n->descr4,descr);
 
@@ -229,8 +229,8 @@ Status Npc_setdescription5(Npc * n, char * descr){
     
     if(n->descr5) free(n->descr5);
     
-    n->descr5=(char*)malloc(sizeof(char)*(strlen(descr)+1))
-    if(!n->descr5) return ERR;
+    n->descr5=(char*)malloc(sizeof(char)*(strlen(descr)+1));
+    if(!n->descr5) return ERROR;
     
     strcpy(n->descr5,descr);
 
@@ -281,7 +281,7 @@ Status Npc_setsymbol(Npc * n, char sym){
     return OK;
 }
 //Gets objects power
-char char Npc_getsymbol(Npc * n){
+char Npc_getsymbol(Npc * n){
         
     assert(n!=NULL);
     
@@ -297,29 +297,29 @@ Npc * Npc_copy(Npc * n){
     n2=Npc_ini();
     if(!n2) return NULL;
     
-    if(object_setname(n2, n->name)==ERR){
+    if(Npc_setname(n2, n->name)==ERROR){
         return NULL;
     }
     
-    Npc_setid(n2, n->id):
-    Npc_setlocation(n2, n->locat):
+    Npc_setid(n2, n->id);
+    Npc_setlocation(n2, n->locat);
     Npc_setcoordinatex(n2, n->coord[0]);
     Npc_setcoordinatey(n2, n->coord[1]);
 
     
-    if(Npc_setdescription1(n2, n->descr1)==ERR){
+    if(Npc_setdescription1(n2, n->descr1)==ERROR){
         return NULL;
     }
-    if(Npc_setdescription2(n2, n->descr2)==ERR){
+    if(Npc_setdescription2(n2, n->descr2)==ERROR){
         return NULL;
     }
-    if(Npc_setdescription3(n2, n->descr3)==ERR){
+    if(Npc_setdescription3(n2, n->descr3)==ERROR){
         return NULL;
     }
-    if(Npc_setdescription4(n2, n->descr4)==ERR){
+    if(Npc_setdescription4(n2, n->descr4)==ERROR){
         return NULL;
     }
-    if(Npc_setdescription5(n2, n->descr5)==ERR){
+    if(Npc_setdescription5(n2, n->descr5)==ERROR){
         return NULL;
     }
     

@@ -1,5 +1,4 @@
 #include "rectangles.h"
-#include "types.h"
 #include <string.h>
 #include <memory.h>
 
@@ -143,7 +142,7 @@ Status rec_writestring(Rectangle* rec, int row, int col, char* str){
 	char *nl_p;
     char save, av_space, ret;
 
-    if (!_is_visible(rec)) return ERROR;
+    if (!rec_isvisible(rec)) return ERROR;
     if (row >= rec->nrows || col >= rec->ncols) return ERROR;
 
     nl_p = strchr(str, '\n');

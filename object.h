@@ -219,7 +219,6 @@ Object* Object_copy(Object* o1);
 /*            -char* descr!=NULL -int quant>=0 -int power                                     
 /* Returns: Object* with a new object :D                         
 /***************************************************/
-Object* Object_create(char*name, int id, int location, int cx, int cy, char* descr, int power);
-
+Object* Object_create(char*name, int id, int location, int cx, int cy, char* descr, char symb);
 
 #endif

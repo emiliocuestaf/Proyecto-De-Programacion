@@ -9,7 +9,7 @@
 /*#define NDEBUG*/
 
     
-struct _Object {
+struct _Object{
     char* name;
     int id;  // Each kind of object has its own id. (-1 if not defined)
     int locat; // If -1 the player owns the object, otherwise the number is the space where the objects is. -2=not defined 
@@ -18,7 +18,7 @@ struct _Object {
     char symbol; //Indicator of usefulness
 };
 
-//Initialization of the structure Object
+/*Initialization of the structure Object*/
 Object* Object_ini(){
     Object* o;
     
@@ -27,14 +27,14 @@ Object* Object_ini(){
     o->name=NULL;
     o->id=-1;
     o->locat=-2;
-    o->coord=(-2,-2);
+    o->coord[0]=-2;
+    o->coord[1]=-2;
     o->descr=NULL;
     o->symbol= 'o'; //susceptible de cambio !!!!!!!!!!!!!!!
     
     return o;
-    
-    
 }
+
 //Objects memory freeing
 void Object_obliterate(Object* o){
     
@@ -43,7 +43,7 @@ void Object_obliterate(Object* o){
     if(o->name){
         free(o->name);}
     if(o->descr){    
-    free(o->descr);}
+        free(o->descr);}
     
     free(o);
     
@@ -62,7 +62,7 @@ Status Object_setname(Object* o, char*name){
     }
     
     o->name=(char*)malloc(sizeof(char)*(strlen(name)+1));
-    if(!o->name) return ERR;
+    if(!o->name) return ERROR;
     
     strcpy(o->name,name);
     
@@ -156,8 +156,8 @@ Status Object_setdescription(Object* o, char*descr){
     
     if(o->descr) free(o->descr);
     
-    o->descr=(char*)malloc(sizeof(char)*(strlen(descr)+1))
-    if(!o->descr) return ERR;
+    o->descr=(char*)malloc(sizeof(char)*(strlen(descr)+1));
+    if(!o->descr) return ERROR;
     
     strcpy(o->descr,descr);
 
@@ -175,7 +175,7 @@ char* Object_getdescription(Object* o){
 
 
 
-//Sets objects power
+//Sets objects symbol
 Status Object_setsymbol(Object* o, char sym){
     
     assert(o!=NULL);
@@ -183,10 +183,10 @@ Status Object_setsymbol(Object* o, char sym){
     o->symbol=sym;
     return OK;
 }
-//Gets objects power
+//Gets objects symbol
 char Object_getsymbol(Object* o){
         
-    assert(o!=NULL);
+    assert( o !=NULL);
     
     return o->symbol;
 }
@@ -195,22 +195,22 @@ char Object_getsymbol(Object* o){
 Object* Object_copy(Object* o1){
     Object* o2;
     
-    assert(o!=NULL);
+    assert(o1 != NULL);
 
     o2=Object_ini();
     if(!o2) return NULL;
     
-    if(Object_setname(o2, o1->name)==ERR){
+    if(Object_setname(o2, o1->name)==ERROR){
         return NULL;
     }
     
-    Object_setid(o2, o1->id):
-    Object_setlocation(o2, o1->locat):
+    Object_setid(o2, o1->id);
+    Object_setlocation(o2, o1->locat);
     Object_setcoordinatex(o2, o1->coord[0]);
     Object_setcoordinatey(o2, o1->coord[1]);
 
     
-    if(Object_setdescription(o2, o1->descr)==ERR){
+    if(Object_setdescription(o2, o1->descr)==ERROR){
         return NULL;
     }
     
@@ -221,31 +221,29 @@ Object* Object_copy(Object* o1){
 }
 
 Object* Object_create(char*name, int id, int location, int cx, int cy, char* descr, 
-                       int power){
+                       char symb){
     
     Object* o;
     
     
     o=Object_ini();
-    if(!o) return NULL,
+    if(!o) return NULL;
     
-    if(Object_setname(o,name)==ERR){
-        return NULL
+    if(Object_setname(o,name)==ERROR){
+        return NULL;
     }
     
     Object_setid(o,id);
     Object_setlocation(o,location);
-    Object_setcoordinatex(o2, cx);
-    Object_setcoordinatey(o2, cy);
+    Object_setcoordinatex(o, cx);
+    Object_setcoordinatey(o, cy);
 
-    if(Object_setdescription(o,descr)==ERR){
-        return NULL
+    if(Object_setdescription(o,descr)==ERROR){
+        return NULL;
     }
     
-    
-    Object_setpower(o,power);
-    
-    
+    Object_setsymbol(o, symb);
+
     return o;
 }
 

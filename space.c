@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "types.h"
-
+#include "space.h"
 
 /*typedef struct{
     int coord x;
@@ -35,7 +35,7 @@ Space* Space_ini(){
     int i;
     
     s = (Space*) malloc (sizeof(Space));
-    if(!Space)
+    if(!s)
         return NULL;
         
     s->id=0;
@@ -74,7 +74,7 @@ Status Space_obliterate(Space* s){
     free(s->name);
     free(s->desc);
     for(i=0; i<4; i++){
-        if(s->neigh[i] != NULL)
+        if(s->neigh[i] != NULL)  /*Auí está mal*/
             Space_obliterate(s->neigh[i]);
     }
     free(s->neigh);
@@ -200,7 +200,7 @@ Status Space_setNeighRoom(Space*s1, int idSpace2, Move m){
 Status Space_setAllNeigh(Space* s, int id[]){
     Move m;
     
-    if (s =0 NULL)
+    if (s = NULL)
         return ERROR;
         
    for(m=1; m <= 4 ; m++){

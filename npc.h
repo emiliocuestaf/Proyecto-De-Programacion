@@ -221,7 +221,7 @@ Npc * Npc_copy(Npc * n);
 /*            -char* descr!=NULL -int quant>=0 -int power                                     
 /* Returns: Object* with a new object :D                         
 /***************************************************/
-Object * Object_create(char*name, int id, int location, int cx, int cy, char* descr, int power);
+/* Npc * Npc_create(char*name, int id, int location, int cx, int cy, char* descr, int power); */
 
 
 #endif
