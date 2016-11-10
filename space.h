@@ -50,6 +50,7 @@ Status Space_setWidth(Space*s, int w);
 int Space_getWidth(Space*s);
 
 Status Space_setMap(Space*s, char** map);
+char** Space_getMap(Space*s);
 Status Space_drawMap(Space*s);
 
     /*Helpful function*/

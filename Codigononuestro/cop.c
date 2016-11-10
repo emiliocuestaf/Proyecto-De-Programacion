@@ -6,13 +6,13 @@
 
 
 typedef struct{
-    char * name;
+    char * internal;
     dfunk f;
 }assoc;
 /*esta es la que se rellena desde fichero:*/
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!RARO dos formatos?
 typedef struct {
-char *cmd;
+char * cmd;
 char *internal;
 int  n_msg;
 char **msg;
@@ -26,19 +26,15 @@ assoc **i_lst;  /* List with associations between internal commands and function
 int     int_no;   /* and the number of elements it contains (0 at the beginning) */
 int     int_max;  /* The number of pointers i_lst that are actually allocated    */
 } CoP;
-struct _cop{
-    int n_assoc;
-    assoc **a;
-};
 
-cop * cop_create(){
-    cop c = (cop *) malloc(sizeof(cop));
+CoP * cop_create(){
+    CoP * c = (CoP *) malloc(sizeof(CoP));
     c->n_assoc = 0;
     c->a = NULL;
 }
 
-Status cop_assoc(cop * c, char * name, dfunk f){
-    assoc ass = (assoc *) malloc(sizeof(assoc));
+Status cop_assoc(CoP * c, char * name, dfunk f){
+    assoc * ass = (assoc *) malloc(sizeof(assoc));
     ass->name = name;
     ass->f = f;
     
@@ -47,7 +43,7 @@ Status cop_assoc(cop * c, char * name, dfunk f){
     return OK;
 }
 
-double cop_execute(cop * c, char * name, double x, double y){
+double cop_execute(CoP * c, char * name, double x, double y){
     int i;
     for(i = 0; i <= c->n_assoc; i++){
         if (!strcmp(name, c->a[i]->name)){

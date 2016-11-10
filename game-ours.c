@@ -38,7 +38,7 @@ Space**  game_readSpace(char *fname/*, int * nspaces*/){
     if(id != i){
       printf("ESTAMOS HACIENDO ALGO MAL EN LOS MAPAS LOKO");
       
-      for(; i <= 0 ; i--){
+      for(; i >= 0 ; i--){
         Space_obliterate(spaces[i]);
       }
       
@@ -51,7 +51,7 @@ Space**  game_readSpace(char *fname/*, int * nspaces*/){
     int locked = atoi(buf = fgetll(fp));
     
     if (Space_setAll(spaces[i], id, 0 /*pa que compile, aqui va la luz*/, name, desc, locked, bdrow, bdcol) == ERROR){
-      for(; i <= 0 ; i--){
+      for(; i >= 0 ; i--){
         Space_obliterate(spaces[i]);
       }
       
@@ -66,23 +66,23 @@ Space**  game_readSpace(char *fname/*, int * nspaces*/){
     
     if (Space_setAllNeigh(spaces[i], neighs) == ERROR){
       
-      for(; i <= 0 ; i--){
+      for(; i >= 0 ; i--){
         Space_obliterate(spaces[i]);
       }
       
       return NULL;
     }
     
-    char maps**[i] = (char**) malloc (bdrow*sizeof(char*));
+    char maps[i] = (char**) malloc (bdrow*sizeof(char*));
     assert(maps[i]);
     
     for (int i=0; i<bdrow; i++) {
       maps[i] = fgetll(fp);
     }
     
-    if (Space_setMap(spaces[i], maps**[i]) == ERROR){
+    if (Space_setMap(spaces[i], maps[i]) == ERROR){
       
-      for(; i <= 0 ; i--){
+      for(; i >= 0 ; i--){
         Space_obliterate(spaces[i]);
       }
       

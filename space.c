@@ -21,7 +21,7 @@ struct _Space{
     Bool locked; /* if the room is locked->TRUE*/   
     
     /*Adjointed rooms*/
-    int* neigh[4];  /*id of neigh rooms*/
+    int neigh[4];  /*id of neigh rooms*/
 
     /*Map*/
     int heigh;
@@ -73,11 +73,7 @@ Status Space_obliterate(Space* s){
         return ERROR;
     free(s->name);
     free(s->desc);
-    for(i=0; i<4; i++){
-        if(s->neigh[i] != NULL)  /*Auí está mal*/
-            Space_obliterate(s->neigh[i]);
-    }
-    free(s->neigh);
+
     
     /*FREE Space MAP????????*/
     
@@ -258,7 +254,13 @@ Status Space_setMap(Space*s, char** map){
     
 }
 
-
+char** Space_getMap(Space*s){
+    if (s == NULL || s->map == NULL)
+        return ERROR;
+        
+    return s->map;
+        
+}
 /*Status Space_drawMap(Space*s);*/
 
     /*Helpful function*/
