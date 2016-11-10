@@ -14,7 +14,7 @@
 
 
 
-4           #Number of maps we have
+4           #Number of maps that we have
 
 # Data for the game board
 #
@@ -44,8 +44,8 @@ EPS Hall #desc
 |            DDDDD                                             DDDDD           |# 11
 |                                                                              |# 12
 |                                                                              |# 13
-\                                                                              /# 14
-\                                                                              /# 15
+<                                                                              ># 14
+<                                                                              ># 15
 |                                                                              |# 16
 |                                                                              |# 17
 |                                                                              |# 18
