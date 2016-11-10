@@ -14,7 +14,11 @@
 
 
 
+<<<<<<< HEAD
 3           #Number of maps we have
+=======
+4           #Number of maps that we have
+>>>>>>> 983fc1c7b89df3bedab2d77d180c4d9f8f43ed09
 
 # Data for the game board
 #
@@ -48,8 +52,8 @@ EPS Hall #desc
 |            DDDDD                                             DDDDD           |# 11
 |                                                                              |# 12
 |                                                                              |# 13
-\                                                                              /# 14
-\                                                                              /# 15
+<                                                                              ># 14
+<                                                                              ># 15
 |                                                                              |# 16
 |                                                                              |# 17
 |                                                                              |# 18

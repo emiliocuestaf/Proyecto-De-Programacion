@@ -45,7 +45,7 @@ Space* Space_ini(){
     s->locked = TRUE;
     
     for(i=0; i<4 ;i++){
-        s->neigh[i]=NULL;
+        s->neigh[i]=-1;  /*si cogemos la segunda opción seria "==-1"*/
     }
     
     s->heigh = 0;
@@ -73,7 +73,11 @@ Status Space_obliterate(Space* s){
         return ERROR;
     free(s->name);
     free(s->desc);
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 983fc1c7b89df3bedab2d77d180c4d9f8f43ed09
     
     /*FREE Space MAP????????*/
     
@@ -184,7 +188,7 @@ Bool Space_getIsLocked(Space*s){
 Status Space_setNeighRoom(Space*s1, int idSpace2, Move m){
     Move aux;
     
-    if(s1 == NULL || m < 0 || m > 4)
+    if(s1 == NULL || m < 1 || m > 4)
         return ERROR;
     
     s1->neigh[m] = idSpace2;
@@ -208,8 +212,8 @@ Status Space_setAllNeigh(Space* s, int id[]){
     
 }
 int Space_getNeighRoom(Space*s, Move m){
-    if(s == NULL || s->neigh[m] == 0)
-        return NULL;
+    if(s == NULL || s->neigh[m] == -1)
+        return -1;
     return s->neigh[m];
 }
 

@@ -3,7 +3,7 @@
 #include "object.h"
 #include "space.h"
 #include "player.h"
-#include "game_ours.h"
+#include "gameours.h"
 #include "types.h"
 #include <assert.h>
 #include <stdlib.h>
@@ -16,7 +16,7 @@ struct _World{
     int n_spaces; // Number of the world's places
     Object **stuff; // Objects around the world
     int n_objects; // Number of objects
-    npc **npcs; // People around the world
+    Npc **npcs; // People around the world
     int n_npcs; // Number of npcs
     Player *me; // Who the fuck are you!
 };
@@ -41,15 +41,15 @@ void World_Obliterate(World * w){
     int i;
     assert(w != NULL);
     for(i = 0; i < w->n_spaces; i++){
-        Space_Obliterate(w->places[i]);
+        Space_obliterate(w->places[i]);
     }
     for(i = 0; i < w->n_npcs; i++){
-        Npc_Obliterate(w->n_npcs[i]);
+        Npc_obliterate(w->npcs[i]);
     }
     for(i = 0; i < w->n_objects; i++){
-        Object_Obliterate(w->object[i]);
+        Object_obliterate(w->stuff[i]);
     }
-    Player_Oblaterate(w->player);
+    player_obliterate(w->me);
     free(w);
 }
 Player * World_get_player(World * w){
@@ -68,15 +68,15 @@ Object * World_get_object(World * w, int o_id){
     int i;
     assert(w != NULL);
     for(i = 0; i < w->n_objects; i++){
-        if(Object_getID(w->stuff[i]) == o_id) return w->stuff[i];
+        if(Object_getid(w->stuff[i]) == o_id) return w->stuff[i];
     }
     return NULL;
 }
-NPC * World_get_N(World * w, int npc_id){
+Npc * World_get_npc(World * w, int npc_id){
     int i;
     assert(w != NULL);
     for(i = 0; i < w->n_npcs; i++){
-        if(NPC_getID(w->npcs[i]) == o_id) return w->npcs[i];
+        if(Npc_getid(w->npcs[i]) == npc_id) return w->npcs[i];
     }
     return NULL;
 }
@@ -85,7 +85,6 @@ NPC * World_get_N(World * w, int npc_id){
 World * World_create(char * objectfile, char * npcfile, char * spacefile){
     World * w = NULL;
     
-    assert(playerfile != NULL);
     assert(objectfile != NULL);
     assert(npcfile != NULL);
     assert(spacefile != NULL);
@@ -111,4 +110,3 @@ World * World_create(char * objectfile, char * npcfile, char * spacefile){
         return NULL;
     }
 }
-#endif

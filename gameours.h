@@ -1,7 +1,10 @@
-#ifndef NPC_H
-#define NPC_H
+#ifndef GAMEOURS_H
+#define GAMEOURS_H
 
 #include "types.h"
+#include "space.h"
+#include "object.h"
+#include "npc.h"
 
 Space**  game_readSpace(char *fname);
 Object ** game_readObject(char * file);
