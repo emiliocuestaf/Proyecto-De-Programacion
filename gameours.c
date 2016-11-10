@@ -2,10 +2,12 @@
 #include <stdlib.h>
 #include <assert.h>
 #include <string.h>
+#include "gameours.h"
 #include "types.h"
 #include "lineread.h"
 #include "space.h"
 #include "object.h"
+#include "npc.h"
 
 
 
@@ -38,7 +40,7 @@ Space**  game_readSpace(char *fname/*, int * nspaces*/){
     if(id != i){
       printf("ESTAMOS HACIENDO ALGO MAL EN LOS MAPAS LOKO");
       
-      for(; i <= 0 ; i--){
+      for(; i >= 0 ; i--){
         Space_obliterate(spaces[i]);
       }
       
@@ -51,7 +53,7 @@ Space**  game_readSpace(char *fname/*, int * nspaces*/){
     int locked = atoi(buf = fgetll(fp));
     
     if (Space_setAll(spaces[i], id, 0 /*pa que compile, aqui va la luz*/, name, desc, locked, bdrow, bdcol) == ERROR){
-      for(; i <= 0 ; i--){
+      for(; i >= 0 ; i--){
         Space_obliterate(spaces[i]);
       }
       
@@ -66,21 +68,22 @@ Space**  game_readSpace(char *fname/*, int * nspaces*/){
     
     if (Space_setAllNeigh(spaces[i], neighs) == ERROR){
       
-      for(; i <= 0 ; i--){
+      for(; i >= 0 ; i--){
         Space_obliterate(spaces[i]);
       }
       
       return NULL;
     }
-    
-    char maps**[i] = (char**) malloc (bdrow*sizeof(char*));
+    maps[i] = (char**) malloc (bdrow*sizeof(char*));
     assert(maps[i]);
+    /*no entiendo XD*/
     
-    for (int i=0; i<bdrow; i++) {
-      maps[i] = fgetll(fp);
+    for (int j=0; j<bdrow; j++) {
+      maps[i][j] = fgetll(fp);
+   
     }
     
-    if (Space_setMap(spaces[i], maps**[i]) == ERROR){
+    if (Space_setMap(spaces[i], maps[i]) == ERROR){
       
       for(; i <= 0 ; i--){
         Space_obliterate(spaces[i]);
@@ -93,11 +96,11 @@ Space**  game_readSpace(char *fname/*, int * nspaces*/){
   
   free (maps);
   
-  return maps;
+  return spaces;
 }
 
 
-Object ** game_readObject(char * file, /* int * nobjects*/){
+Object ** game_readObject(char * file/*,  int * nobjects*/){
   
   FILE *fp = fopen(file, "r");
   assert(fp);
@@ -131,13 +134,13 @@ Object ** game_readObject(char * file, /* int * nobjects*/){
     buf = fgetll(fp);
     Object_setsymbol(objs[i], buf[0]);/*Control de errores???*/
   }  
-  buf = fgetll(fp);
-  if(buf != EOF) return NULL;
+  numaux = atoi(buf = fgetll(fp));
+  if(numaux != EOF) return NULL;
   
   return objs;
 }
 
-Npc ** game_readNpc(char * file, /* *numnpc*/){
+Npc ** game_readNpc(char * file/*,  *numnpc*/){
   
   FILE *fp = fopen(file, "r");
   assert(fp);
@@ -154,12 +157,12 @@ Npc ** game_readNpc(char * file, /* *numnpc*/){
   assert(npcs);
   for(i = 0; i < numnpc /* *numnpc*/; i++){
     npcs[i] = Npc_ini();
-    assert(objs[i]);
+    assert(npcs[i]);
     
     buf = fgetll(fp);
     Npc_setname(npcs[i], buf);/*Control de errores???*/
     numaux = atoi(buf = fgetll(fp));
-    Npc_setid(npcsi], numaux);/*Control de errores???*/
+    Npc_setid(npcs[i], numaux);/*Control de errores???*/
     numaux = atoi(buf = fgetll(fp));
     Npc_setlocation(npcs[i], numaux);/*Control de errores???*/
     numaux = atoi(buf = fgetll(fp));
@@ -179,8 +182,8 @@ Npc ** game_readNpc(char * file, /* *numnpc*/){
     buf = fgetll(fp);
     Npc_setsymbol(npcs[i], buf[0]);/*Control de errores???*/
   }  
-  buf = fgetll(fp);
-  if(buf != EOF) return NULL;
+  numaux = atoi(buf = fgetll(fp));
+  if(numaux != EOF) return NULL;
   
   return npcs;
 }
@@ -190,7 +193,8 @@ Npc ** game_readNpc(char * file, /* *numnpc*/){
   Creates the interface reading the data from a text file (given as a
   parameter), and displays it. Returns the interface handle.
 */
-intrf *_intrf_ini(char *fname) {
+
+/*intrf *_intrf_ini(char *fname) {
   FILE *fp = fopen(fname, "r");
 
   char *buf;
@@ -240,4 +244,4 @@ intrf *_intrf_ini(char *fname) {
   fclose(fp);
   
   return itf;
-}
+}*/

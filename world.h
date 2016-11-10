@@ -27,7 +27,7 @@ World * World_Ini();
 /*                                                
 /* Returns: -                          
 /***************************************************/
-void World_Obliterate(world * w);
+void World_Obliterate(World * w);
 
 // Add a Space to the World
 //Status add_Space(World * w);
@@ -61,5 +61,5 @@ World * World_create(char * objectfile, char * npcfile, char * spacefile);
 Player * World_get_player(World * w);
 Space * World_get_space(World * w, int s_id);
 Object * World_get_object(World * w, int o_id);
-NPC * World_get_npc(World * w, int npc_id);
+Npc * World_get_npc(World * w, int npc_id);
 #endif

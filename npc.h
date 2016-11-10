@@ -163,6 +163,50 @@ int Npc_getcoordinatey(Npc * n);
 /***************************************************/
 Status Npc_setdescription1(Npc * n, char * descr);
 
+/***************************************************/
+/* Function: object_setdescription  Fecha: 15-10-2016     
+/* Autores: Segmentation Fault                     
+/*                                                 
+/* Sets objects description
+/* Arguments:  Object* o!=NULL char*descr!=NULL                    
+/*                                                
+    /* Returns: ERR or OK                          
+/***************************************************/
+Status Npc_setdescription2(Npc * n, char * descr);
+
+/***************************************************/
+/* Function: object_setdescription  Fecha: 15-10-2016     
+/* Autores: Segmentation Fault                     
+/*                                                 
+/* Sets objects description
+/* Arguments:  Object* o!=NULL char*descr!=NULL                    
+/*                                                
+    /* Returns: ERR or OK                          
+/***************************************************/
+Status Npc_setdescription3(Npc * n, char * descr);
+
+/***************************************************/
+/* Function: object_setdescription  Fecha: 15-10-2016     
+/* Autores: Segmentation Fault                     
+/*                                                 
+/* Sets objects description
+/* Arguments:  Object* o!=NULL char*descr!=NULL                    
+/*                                                
+    /* Returns: ERR or OK                          
+/***************************************************/
+Status Npc_setdescription4(Npc * n, char * descr);
+
+/***************************************************/
+/* Function: object_setdescription  Fecha: 15-10-2016     
+/* Autores: Segmentation Fault                     
+/*                                                 
+/* Sets objects description
+/* Arguments:  Object* o!=NULL char*descr!=NULL                    
+/*                                                
+    /* Returns: ERR or OK                          
+/***************************************************/
+Status Npc_setdescription5(Npc * n, char * descr);
+
 
 /***************************************************/
 /* Function: object_getdescription  Fecha: 15-10-2016     
@@ -174,6 +218,50 @@ Status Npc_setdescription1(Npc * n, char * descr);
 /* Returns: char* with the descr or NULL                           
 /***************************************************/
 char * Npc_getdescription1(Npc * n);
+
+/***************************************************/
+/* Function: object_getdescription  Fecha: 15-10-2016     
+/* Autores: Segmentation Fault                     
+/*                                                 
+/* Gets objects description
+/* Arguments:  Object* o!=NULL                     
+/*                                                
+/* Returns: char* with the descr or NULL                           
+/***************************************************/
+char * Npc_getdescription2(Npc * n);
+
+/***************************************************/
+/* Function: object_getdescription  Fecha: 15-10-2016     
+/* Autores: Segmentation Fault                     
+/*                                                 
+/* Gets objects description
+/* Arguments:  Object* o!=NULL                     
+/*                                                
+/* Returns: char* with the descr or NULL                           
+/***************************************************/
+char * Npc_getdescription3(Npc * n);
+
+/***************************************************/
+/* Function: object_getdescription  Fecha: 15-10-2016     
+/* Autores: Segmentation Fault                     
+/*                                                 
+/* Gets objects description
+/* Arguments:  Object* o!=NULL                     
+/*                                                
+/* Returns: char* with the descr or NULL                           
+/***************************************************/
+char * Npc_getdescription4(Npc * n);
+
+/***************************************************/
+/* Function: object_getdescription  Fecha: 15-10-2016     
+/* Autores: Segmentation Fault                     
+/*                                                 
+/* Gets objects description
+/* Arguments:  Object* o!=NULL                     
+/*                                                
+/* Returns: char* with the descr or NULL                           
+/***************************************************/
+char * Npc_getdescription5(Npc * n);
 
 
 /***************************************************/
