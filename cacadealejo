@@ -1,0 +1,41 @@
+/* Set the cmd (comand) into the structure Ext */
+Status ext_setCmd(Ext * e, char * cmd){
+    assert(e);
+    assert(cmd);
+    
+    e->cmd = cmd;
+    return 1;
+}
+/* Set the internal (name) into the structure Ext */
+Status ext_setInternal(Ext * e, char * internal){
+    assert(e);
+    assert(internal);
+    
+    e->internal = internal;
+    return 1;
+}
+/* Set one answer (to a comand) into the structure Ext */
+Status ext_setCmd(char * eans, char * answer){
+    assert(eans);
+    assert(answer);
+    
+    eans = answer;
+    return 1;
+}
+/* Set the answers (to a comand) into the structure Ext */
+Status ext_setAnswers(Ext * e, int n_ans, char ** answers){
+    int i;
+    assert(e);
+    assert(answers);
+    
+    for(i = 0; i < n_ans; i++){
+        e->answers[i] = (char *) malloc(sizeof(char)* strlen())
+    }
+    e->cmd = cmd;
+    return 1;
+}
+
+
+
+
+http://caracolazo.com/como-hacer-simbolos-con-el-teclado/

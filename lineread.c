@@ -19,6 +19,8 @@
 
 #define MAXLINE  10000
 
+char *strdup(const char * );
+
 /*-------------------------------------------------------------------
             I N T E R N A L    F U N C T I O N S
   -------------------------------------------------------------------*/
@@ -35,7 +37,7 @@ char *_clean_up_string(char *string) {
   ptr = string + strlen(string);   /* This makes ptr point to the "0" at the end of the string */
   ptr--;
   while( isspace(*ptr) )
-    *ptr--;
+    ptr--;
   *(ptr+1) = 0;   
   
   /* Remove the initial blanks */
@@ -72,7 +74,7 @@ char *_read_physical_line(FILE *fp) {
   ptr--;
   if (ptr <= buf)            /* This is true if the line only had a comment */
     return _read_physical_line(fp);
-  while(isspace(*ptr) && ptr > buf)
+  while(isspace(*ptr) && ptr >= buf)
     ptr--;
   if (ptr < buf)           /* The line is empty or it contains nothing but comments */
     return _read_physical_line(fp);
@@ -97,6 +99,7 @@ char *_read_physical_line(FILE *fp) {
 char *_read_logical_line(FILE *fp) {
   char *q_acc;
   char *q = _read_physical_line(fp);
+  int i;
   if (q == NULL) return NULL;
   if (*(q + strlen(q) - 1) != '\\') return q;
 
@@ -113,8 +116,8 @@ char *_read_logical_line(FILE *fp) {
     q = q_acc;
     q_acc = (char *) malloc((strlen(q) + strlen(q1))*sizeof(char));
     int k=0;
-    for (int i=0; i<strlen(q); i++) q_acc[k++] = q[i];
-    for (int i=0; i<strlen(q1); i++) q_acc[k++] = q1[i];
+    for ( i=0; i<strlen(q); i++) q_acc[k++] = q[i];
+    for ( i=0; i<strlen(q1); i++) q_acc[k++] = q1[i];
     q_acc[k] = 0;
     free(q);
     free(q1);

@@ -18,7 +18,7 @@ struct _Object{
     char symbol; //Indicator of usefulness
 };
 
-/*Initialization of the structure Object*/
+/*Initialization of the Object structure */
 Object* Object_ini(){
     Object* o;
     

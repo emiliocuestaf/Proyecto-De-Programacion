@@ -5,28 +5,29 @@
 #include "player.h"
 #include "npc.h"
 #include "types.h"
+#include "interface.h"
 typedef struct _World World;
 
-/***************************************************/
-/* Function: world_Ini  Fecha: 15-10-2016     
-/* Autores: Segmentation Fault                     
-/*                                                 
-/* Initialization of the structure "World"                                                  
-/* Arguments: -                    
-/*                                                
-/* Returns: World* without information                           
-/***************************************************/
+/***************************************************
+* Function: world_Ini  Fecha: 15-10-2016     
+* Autores: Segmentation Fault                     
+*                                                 
+* Initialization of the structure "World"                                                  
+* Arguments: -                   
+*                                                
+* Returns: World* without information                           
+***************************************************/
 World * World_Ini();
 
-/***************************************************/
-/* Function: world_Obliterate Fecha: 15-10-2016     
-/* Autores: Segmentation Fault                     
-/*                                                 
-/* Free the structure "World"                                               
-/* Arguments:  World* o!=NULL                     
-/*                                                
-/* Returns: -                          
-/***************************************************/
+/***************************************************
+* Function: world_Obliterate Fecha: 15-10-2016     
+* Autores: Segmentation Fault                     
+*                                                
+* Free the structure "World"                                               
+* Arguments:  World* o!=NULL                     
+*                                                
+* Returns: -                          
+***************************************************/
 void World_Obliterate(World * w);
 
 // Add a Space to the World
@@ -47,19 +48,25 @@ void World_Obliterate(World * w);
 // Set the number of objects into the structure 
 //Status * set_Npcs(World * w, int n_npcs);
 
-/***************************************************/
-/* Function: world_Create Fecha: 15-10-2016     
-/* Autores: Segmentation Fault                     
-/*                                                 
-/* Fill the structure World ("create" it) with the information of two given files
-/* This function will be public                                                
-/* Arguments:  char* spacefile, char objfile              
-/*                                                
-/* Returns: World* with its information                         
-/***************************************************/
-World * World_create(char * objectfile, char * npcfile, char * spacefile);
+/***************************************************
+* Function: world_Create Fecha: 15-10-2016     
+* Autores: Segmentation Fault                     
+*                                                 
+* Fill the structure World ("create" it) with the information of two given files
+* This function will be public                                                
+* Arguments:  char* spacefile, char objfile              
+*                                                
+* Returns: World* with its information                         
+***************************************************/
+World * World_create(char * objectfile, char * npcfile, char * spacefile, char * playerfile);
 Player * World_get_player(World * w);
 Space * World_get_space(World * w, int s_id);
 Object * World_get_object(World * w, int o_id);
 Npc * World_get_npc(World * w, int npc_id);
+Space ** World_get_spaceS(World * w);
+Object ** World_get_objectS(World * w);
+Npc ** World_get_npcS(World * w);
+Intr * World_get_interface(World * w);
+
+void Spaces_free(Space ** s, int n_spaces);
 #endif

@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <assert.h>
 #include <string.h>
-#include "gameours.h"
+#include "loading.h"
 #include "types.h"
 #include "lineread.h"
 #include "space.h"
@@ -11,34 +11,48 @@
 
 
 
-Space**  game_readSpace(char *fname/*, int * nspaces*/){
+Space**  game_readSpace(char *fname){
   
   FILE *fp = fopen(fname, "r");
+  if(fp == NULL)
+    return NULL;
   
   char *buf;
-  int i,j;
+  int i,j,id;
   
-  /* *nspaces = atoi(buf = fgetll(fp));*/
   int nmaps = atoi(buf = fgetll(fp));
+  free(buf);
   
-  Space ** spaces = Space_ini_array (nmaps/* *nspaces*/);
-  
-  assert(spaces);
-  
-  char*** maps= (char***) malloc (nmaps * sizeof(char**)); /* quiza nspaces en vez de nmaps*/
+  Space ** spaces = Space_ini_array (nmaps);
+  if(spaces == NULL) return NULL;
+  char*** maps= (char***) malloc (nmaps * sizeof(char**)); 
+  if(maps == NULL){
+    free(spaces);
+    return NULL;
+  }
 
-  assert(maps);
-  int bdrow = atoi(buf = fgetll(fp));  
-  int bdcol = atoi(buf = fgetll(fp));  
+  int bdrow = atoi(buf = fgetll(fp));
+  free(buf);
+  int bdcol = atoi(buf = fgetll(fp));
+  free(buf);
+  
   
   
   for (i=0; i < nmaps/* *nspaces*/; i++){
-    spaces[i] = Space_ini();
-    assert(spaces[i]);
+    int ndoors = atoi(buf = fgetll(fp));
+    free(buf);
+    spaces[i] = Space_ini(ndoors);
+    if(spaces[i] == NULL){
+      for(i--; i <= 0; i--)
+        Space_obliterate(spaces[i]);
+      return NULL;
+    }
       
-    int id = atoi(buf = fgetll(fp));
+    id = atoi(buf = fgetll(fp));
+    free(buf);
+        
     if(id != i){
-      printf("ESTAMOS HACIENDO ALGO MAL EN LOS MAPAS LOKO");
+      printf("Something went wrongggg (Hint = game_readSpace)\n");
       
       for(; i >= 0 ; i--){
         Space_obliterate(spaces[i]);
@@ -47,55 +61,67 @@ Space**  game_readSpace(char *fname/*, int * nspaces*/){
       return NULL;
       
     }
-    /*Luces*/
+    
     char *name = fgetll(fp);
     char *desc = fgetll(fp);
-    int locked = atoi(buf = fgetll(fp));
     
-    if (Space_setAll(spaces[i], id, 0 /*pa que compile, aqui va la luz*/, name, desc, locked, bdrow, bdcol) == ERROR){
+    for(j=0; j < ndoors; j++){
+      int dir = atoi(buf = fgetll(fp));
+      free(buf);
+      int drow = atoi(buf = fgetll(fp));
+      free(buf);
+      int dcol = atoi(buf = fgetll(fp));
+      free(buf);
+      int locked = atoi(buf = fgetll(fp));
+      free(buf);
+      int ndoor = atoi(buf = fgetll(fp));
+      free(buf);
+      if(Space_doorSetOne(spaces[i], j, dir, drow, dcol, locked, ndoor) == ERROR) {
+       for(; i >= 0 ; i--){
+         Space_obliterate(spaces[i]);
+        }
+      return NULL;
+      }
+    }
+    
+    if (Space_setAll(spaces[i], id, 0, name, desc, bdrow, bdcol) == ERROR){
       for(; i >= 0 ; i--){
         Space_obliterate(spaces[i]);
       }
       
       return NULL;
     }
-    int j;
-    int neighs[4];
+    free(name);
+    free(desc);
     
-    for (j = 0; j < 4; j++){
-      neighs[j] = atoi(buf = fgetll(fp));
-    } 
-    
-    if (Space_setAllNeigh(spaces[i], neighs) == ERROR){
-      
-      for(; i >= 0 ; i--){
-        Space_obliterate(spaces[i]);
-      }
-      
-      return NULL;
-    }
     maps[i] = (char**) malloc (bdrow*sizeof(char*));
-    assert(maps[i]);
-    /*no entiendo XD*/
-    
-    for (int j=0; j<bdrow; j++) {
-      maps[i][j] = fgetll(fp);
-   
-    }
-    
-    if (Space_setMap(spaces[i], maps[i]) == ERROR){
-      
+    if(maps[i] == NULL){
       for(; i >= 0 ; i--){
         Space_obliterate(spaces[i]);
       }
-      
+    }
+    
+    
+    for (j=0; j<bdrow; j++) {
+      buf = fgetll(fp);
+      maps[i][j] = buf;
+    }
+    
+
+    if (Space_setMap(spaces[i], (char**) maps[i]) == ERROR){
+      for(; i >= 0 ; i--){
+        Space_obliterate(spaces[i]);
+      }
       return NULL;      
     }
     
+    for (j=0; j<bdrow; j++) {
+      free(maps[i][j]);
+    }
+    free(maps[i]);
   }
-  
-  free (maps);
-  
+  free(maps);
+  fclose(fp);
   return spaces;
 }
 
@@ -208,6 +234,44 @@ Npc ** game_readNpc(char * file/*,  *numnpc*/){
   return npcs;
 }
 
+
+Status AllocateObjects(Space** spaces, Object** objects, int nobjects){
+  int i;
+  int id;
+  char c;
+  int row, col;
+  assert(spaces != NULL);
+  assert(objects != NULL);
+  
+  for(i=0; i < nobjects; i++){
+    id = Object_getlocation(objects[i]);
+    if(id < 0) return ERROR;
+    c = Object_getsymbol(objects[i]);
+    row = Object_getcoordinatey(objects[i]);
+    col = Object_getcoordinatey(objects[i]);
+    if(row < 0 || col < 0) return ERROR;
+    if(Space_changeChar(spaces[id], c, row, col) == ERROR) return ERROR;
+  }
+}
+
+Status AllocateNpcs(Space** spaces, Npc** npcs, int nNpcs){
+  int i;
+  int id;
+  char c;
+  int row, col;
+  assert(spaces != NULL);
+  assert(npcs != NULL);
+  
+  for(i=0; i < nNpcs; i++){
+    id = Npc_getlocation(npcs[i]);
+    if(id < 0) return ERROR;
+    c = Npc_getsymbol(npcs[i]);
+    row = Npc_getcoordinatey(npcs[i]);
+    col = Npc_getcoordinatey(npcs[i]);
+    if(row < 0 || col < 0) return ERROR;
+    if(Space_changeChar(spaces[id], c, row, col) == ERROR) return ERROR;
+  }
+}
 
 /*
   Creates the interface reading the data from a text file (given as a

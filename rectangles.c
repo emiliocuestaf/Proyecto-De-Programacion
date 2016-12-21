@@ -2,24 +2,7 @@
 #include <string.h>
 #include <memory.h>
 
-struct _Rectangle{
-    
-  int  firstcol;     /* column on the recreen where the window begins */
-  int  ncols;     /* number of column in the window  */
-  
-  int  firstrow;     /* row on the recreen where the window begins */
-  int  nrows;     /* number of rows in the window  */
-  
-  int  lastcol; /*Last available gap*/   
-  int  lastrow;	
-  
-  int  last_line; /*Last point where you wrote*/
 
-
-  int  backgcol; /* the background colour for this window */
-  int  foregcol; /* the foreground colour for this window */
- 
-};
 
 
 /*Important private functions*/
@@ -140,7 +123,7 @@ Status rec_writechar(Rectangle* rec, int row, int col , char c){
 /*Also copied*/
 Status rec_writestring(Rectangle* rec, int row, int col, char* str){
 	char *nl_p;
-    char save, av_space, ret;
+    char save, av_space;
 
     if (!rec_isvisible(rec)) return ERROR;
     if (row >= rec->nrows || col >= rec->ncols) return ERROR;
@@ -162,12 +145,71 @@ Status rec_writestring(Rectangle* rec, int row, int col, char* str){
     fflush(stdout);
     if (save > 0) {
         str[av_space - 1] = save;
-        ret = av_space;
-    } else
-        ret = strlen(str);
-
-    if (nl_p) *nl_p = '\n';
-    rec->last_line = row;
+    } 
+    else{
+        if (nl_p) *nl_p = '\n';
+        rec->last_line = row;
+    }
     return OK;
+}
 
+
+Status rec_writestring_v2(Rectangle* rec, int row, int col, char* str){
+ 	int r1, c1;
+ 	
+	c1= rec->firstcol;
+	r1= rec->firstrow;
+	printf("%c[%d;%dH",27,row+r1,col+c1);
+	printf("%s", str);
+    return OK;
+}
+
+
+void rec_printborder(Rectangle* rec){
+
+int i, r1, c1, rn, cn;
+r1= rec->firstrow;
+c1=rec ->firstcol;
+rn=rec->nrows;
+cn=rec->ncols;
+
+printf("%c[%d;%dH", 27, r1, c1);
+printf("+");	
+fflush(stdout);
+
+
+
+for (i=1; i<rn; i++){
+	printf("%c[%d;%dH", 27, i+r1, c1);
+	printf("|");
+}
+
+printf("%c[%d;%dH", 27, rn+r1, c1);
+printf("+");
+
+
+
+for (i=1; i<cn; i++){
+	printf("%c[%d;%dH", 27, r1+rn, i+c1);
+	printf("-");
+}
+
+printf("%c[%d;%dH", 27, rn+r1, c1+cn);
+printf("+");
+
+for (i=1; i<rn; i++){
+	printf("%c[%d;%dH", 27, r1+i, cn+c1);
+	printf("|");
+}
+
+
+printf("%c[%d;%dH", 27, r1, c1+cn);
+printf("+");
+
+for (i=1; i<cn; i++){
+	printf("%c[%d;%dH", 27, r1, i+c1);
+	printf("-");
+}
+
+return;
 }

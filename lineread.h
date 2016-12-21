@@ -11,8 +11,8 @@
 
   -------------------------------------------------------------------
 */
-#ifndef _____LINE__READ_____
-#define _____LINE__READ_____
+#ifndef LINEREAD_H
+#define LINEREAD_H
 
 #include <stdio.h>
 
@@ -77,6 +77,6 @@
       buffer and returns is: the calling program is in charce of free-ing
       the buffer.
 */
-char *fgetll(FILE *f);
+char * fgetll(FILE *f);
 
 #endif

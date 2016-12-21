@@ -3,17 +3,18 @@
 #include "space.h"
 #include "object.h"
     
+// ESTARÍA BIEN CREAR  GET"DATO" DE TODAS Y ESO XD
 
 typedef struct _Player Player;
 
 //Initialization Functions
 
-Player* player_ini(int space, int max_object, int health, int X, int Y); //create Player
+Player* player_ini(int space, int max_object, int rank, int X, int Y); //create Player
 Status player_obliterate( Player* p); //Destroy Player
 
 //Player Functions
 
-Status player_changeHealth(Player* p, int health);//modify health
+Status player_changeRank(Player* p, int rank);//modify health
 Bool player_isAlive(Player* p);
 Status player_setName(Player* p, char* c);
 

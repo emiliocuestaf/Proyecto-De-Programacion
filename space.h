@@ -14,8 +14,22 @@
 
 typedef struct _Space Space;
 
-Space* Space_ini();
+    /*Doors*/
+int doIleave(Space *s, int r, int c, int* ndoor);
+Status Space_doorSetLock(Space *s, int ndoor, Bool locked);
+Status Space_doorSetCoord(Space *s, int ndoor, int row, int col);
+Status Space_doorSetDir(Space *s, int ndoor, int dir);
+Status Space_SetnumberDoors(Space*s, int ndoors);
+Status Space_doorSetNdoor(Space*s, int ndoor, int ndoor2);
+Status Space_doorSetOne(Space *s, int ndoor, int dir, int row, int col, Bool locked, int ndoor2);
+int Space_doorGetCol(Space *s, int ndoor);
+int Space_doorGetRow(Space *s, int ndoor);
+int Space_getNdoors(Space*s);
+
+    
+Space* Space_ini(int ndoors);
 Space** Space_ini_array(int tamanio);
+Status Space_obliterateMap(Space* s);
 Status Space_obliterate(Space* s);
 
     /*Identification*/
@@ -53,9 +67,12 @@ Status Space_setMap(Space*s, char** map);
 char** Space_getMap(Space*s);
 Status Space_drawMap(Space*s);
 
+Status Space_changeChar(Space* s, char symbol, int row, int col);
+Status Space_eraseChar(Space* s, int row, int col);
+
     /*Helpful function*/
     
-Status Space_setAll(Space*s, int id, Bool lights, char* name, char* desc, Bool isLock, int heigh, int width);
+Status Space_setAll(Space*s, int id, Bool lights, char* name, char* desc, /*Bool isLock,*/ int heigh, int width);
 
     /*Move*/
     

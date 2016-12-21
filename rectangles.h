@@ -5,7 +5,25 @@
 #include <stdio.h>
 #include <stdlib.h>  
 #include "types.h"  
+ 
+struct _Rectangle{
+    
+  int  firstcol;     /* column on the recreen where the window begins */
+  int  ncols;     /* number of column in the window  */
   
+  int  firstrow;     /* row on the recreen where the window begins */
+  int  nrows;     /* number of rows in the window  */
+  
+  int  lastcol; /*Last available gap*/   
+  int  lastrow;	
+  
+  int  last_line; /*Last point where you wrote*/
+
+
+  int  backgcol; /* the background colour for this window */
+  int  foregcol; /* the foreground colour for this window */
+ 
+};
 
 typedef struct _Rectangle Rectangle;
 
@@ -27,5 +45,9 @@ Status rec_setforegcol(Rectangle* rec, int color);
 Status rec_writechar(Rectangle* rec, int row, int col , char c);
 
 Status rec_writestring(Rectangle* rec, int row, int col, char* str);
+
+Status rec_writestring_v2(Rectangle* rec, int row, int col, char* str);
+
+void rec_printborder(Rectangle* rec);
 
 #endif

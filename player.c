@@ -11,18 +11,16 @@ struct _Player{
     int space; // ID of space where you are at the moment
     int x;
     int y;
-    int max_object; 
-    int health; 
+    int rank; 
     char* name;
 } ;
 
-Player* player_ini(int space, int max_object, int health, int X, int Y){
+Player* player_ini(int space, int max_object, int rank, int X, int Y){
     Player* p;
     p = (Player*) malloc(sizeof(Player));
     assert(p!=NULL);
     p->space= space;
-    p->max_object=max_object;
-    p->health=health;
+    p->rank=rank;
     p->x= X;
     p->y=Y;
     
@@ -45,18 +43,13 @@ Status player_obliterate(Player* p){
 }
 
 
-Status player_changeHealth(Player* p, int health){
+Status player_changeRank(Player* p, int rank){
     assert (p != NULL);
-    p->health=health;
+    p->rank=rank;
+    return OK;
 }
 
 
-Bool player_isAlive(Player* p){
-    if(p->health>0)
-        return TRUE;
-    else
-        return FALSE;
-}
 
 
 //PLayer SPACE functions
@@ -78,34 +71,6 @@ Bool player_isIn (Player* p, int SpaceID ){
 int player_whereIsPlayer (Player* p){
     assert(p!=NULL);
     return p->space;
-}
-
-Status player_move_InSpace (Player* p, int incrx, int incry){
-    Space *s; 
-    int i, xmax, ymax, id, flag;
-    assert(p!=NULL);
-    
-    id = player_whereIsPlayer(p);
-    
-    //Search for the pointer to the space your in
-    for (i=0; i < world->n_places && flag=0;i++){
-        if (Space_getID(world->places[i]) == id)
-            flag =1;
-    }
-    
-    s= world->places[i];
-    
-    xmax= Space_getHeigh(s);
-    ymax = Space_getWidth(s);
-    
-    if (p->x+ incrx<=xmax)
-        p->x+=incrx;
-        
-    if (p->y+incry<=ymax)
-        p->y+=incry;
-        
-    return OK;
-    
 }
 
 
@@ -144,7 +109,7 @@ Status player_move_InSpace (Player* p, int incrx, int incry){
         return FALSE;
 } */
 
-Status player_PickUp(Player* p, Object *o){
+/*Status player_PickUp(Player* p, Object *o){
     assert(p !=NULL);
     assert(o !=NULL);
     Object_setlocation(o, -1);
@@ -158,4 +123,4 @@ Status player_Drop(Player* p, Object* o ){
     assert(o != NULL);
     Object_setlocation(o, p->space);
     return OK;
-}
+}*/
