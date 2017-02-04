@@ -1,0 +1,4 @@
+Starting error log:
+Unpacking in process
+Command found
+Object is: @

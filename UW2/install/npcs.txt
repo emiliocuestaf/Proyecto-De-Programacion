@@ -1,0 +1,2486 @@
+26 #number of npcs
+
+
+# Number of descriptions
+# Name
+# ID
+# Location
+# Coordinatex
+# Coordinatey
+####Mission
+####Phase
+####Description
+
+# Mision 1
+#   Fase 1: ve al meeting room -> HABLAS CON LUCÍA
+#   Fase 2: ve a hablar con Paco->te manda a la plaza canon pero no tienes pasta Aitor-> te manda al veggie-> HABLAS CON BLANCA
+#   Fase 3: consigues dinero de Blanca y vuelves a por las fotocopias-> HABLAS CON EL TÍO DE LAS FOTOCOPIAS
+#   Fase 4: vas a por Paco, te manda a por Nuria y Óscar -> HABLAS CON NURIA
+
+# Mision 2
+#   Fase 1: DESPUÉS DE HABLAR CON NURIA. Ve a buscar su móvil (GARDENS 1 y 2) -> LUCHAS CON GR7 Y ANTHONY Y CONSIGUES EL MÓVIL DE ELLOS
+#   Fase 2:  -> ve a devolvérselo a NURIA (Oscar angry si nohaces esto) -> SE LO DEVUELVES
+#   Fase 3:-> informa a Oscar(happy) de tu éxito -> alguien te espera en el HALL-> HABLAS CON X
+
+# Mision 3
+#   Fase 1: el hombre te da la copia del examen de edat-> quieres hablar con rodri pero no te dejan pasar-> library-> HABLAS CON VILLAR y te dice que es real
+#   Fase 2: vuelves a hablar con Villar y te dice que lo has enviado por el grupo, y que vayas al classroom para hacer el examen.
+#   EXAMEN
+#   Fase: HABLAS CON MIGUI y te dice que has ascendido y te informa de que han raptado a Juan.( por platanita)
+
+
+# Mision 4
+#   Fase 1: Al salir de classroom 1 Andrea and pakiao explain you the plan to rescue Juan(CINEMATICA)
+#       water supply- need key - maintenance service
+#   Fase 2: Encuentras la llave abres water supply y lo ROMPES (encuentras el SWISS KNIFE)
+
+# Mission 5:
+#   Phase 1: You enter the room and meet the *misterious man*(CINEMATICA)  ve a hablar con jesusdani y con rodri
+#   Fase 2:
+#   Then You go to see De Pool but Andres and lucia are flirting and dont let you in
+#   You talk to Jezu dani and learn to use the knife to get into depools room
+#   You talk to de Pool and he gives you the gun
+
+# Mision 6:
+#    Fase 1: vas a ciencias y hablas con Ric and Jandrov-> coges chocolate
+#    Fase 2: vas a clssrm2, encuentras usb hablas con Victor y adri
+#    Fase 3: vas a plaza y cambias chocolate por joint 
+#    Fase 4: se lo das (joint victor) y coges la llave, abres y aparecen Juan y andrea
+
+# Mision 7:
+#    Fase 1: Te dicen que avises al jefe (BOSS OFFICE) RODRI te dice que está enfermo de la comida vegana QUIERE POR EJEMPLO COMIDA ASTURIANA(CACHOPO)
+#    Fase 2: Decides iral restaurante Asturiano Waitress ( no se quien todavia) a consegir la comida -> LA CONSIGUES askfor it a santi.
+#    Fase 3: se la llevas a Rodri el cual esta to happy y te PROMUEVE A LIUTENANT.
+
+# Mision 8:
+#    EXAMEN
+#    Fase 1: le sale mal a todo el mundo, Óscar (Y) ha hackeado la EPS y está robando info-> vas al lab y hablas con oscar (te cuenta lo del pen), lo lees -> SE LO DAS A RODRI
+#    Fase2: vas al meeting room (de antes) y cuentas lo que has aprendido -> HABLAS CON RODRI, te hace captain y te manda al science building
+
+# Mision 9:
+#    Fase 1: goes to Science building-> talk to cabana-> sends you to library->PICK CHARM BOOK
+#    Fase 2: now you can open every door, go to factory-> talk to grasshoppers to eat everything-> go to Yuji office -> END
+
+
+# PAKIAO
+
+25 # ndesc
+Paco #nombre
+0 #id
+5 #location
+57 #coordinatex
+17 #coordinatey
+
+1 # M
+1 # P
+Hey there delilah. #description1
+1 # M
+2 # P 
+So... you are a Rookie, right?I'm your boss, but,I don't trust you...Here, you must go to CANON and photocopy this secret papers ("askfor"),IT'S CRUCIAL. #description2
+1 # M
+3 # P
+Still rounding here? Bring me the phocopies! #description3
+1 # M
+4 # P
+Ummm, good work, now, you should go to the laboratory, I think those there, Nuria and Oscar, need you. #description4 
+
+2 # M
+1 # P
+Don't bother me. I think you have a "mission" to fullfill. #description5
+2 # M
+2 # P
+Still hanging about? Come on guy, I expect better of one of my rookies. #description6
+2 # M
+3 # P
+I heard someone's waiting for you at the HALL. #description7
+
+3 # M
+1 # P
+So you have a copy of the next EDAT'S exam... sure... #description8
+3 # M
+2 # P 
+So you have a copy of the next EDAT'S exam... sure... #description9
+3 # M
+3 # P
+Wow the exam was greatt! Talk to Migui (Classroom 1), he has something important to tell you. #description10
+
+4 # M
+1 # P
+Well, we want you to make a distraction with the water supply to be able to rescue SuperJuan260 #description11
+4 # M
+2 # P 
+Hurry up! SuperJuan260 is being tortured right now for sure! #description12
+
+5 # M
+1 # P
+SuperJuan lost his penis while being tortured...#
+5 # M
+2 # P
+I found a way to give Juan his penis back. Only now its black and giant #
+
+6 # M
+1 # P
+Oh now, they are killing me. # desc
+6 # M
+2 # P
+I'm dead. # desc
+6 # M
+3 # P
+I'm dead. # desc
+6 # M
+4 # P
+I'm dead. # desc
+
+7 # M
+1 # P
+The very boss is sick. We need him in his better faculties for the next CIREL's exam.  #description8
+7 # M
+2 # P 
+The very boss is sick. We need him in his better faculties for the next CIREL's exam. #description9
+7 # M
+3 # P
+The very boss is sick. We need him in his better faculties for the next CIREL's exam. #description10
+
+8 # M 
+1 # P
+I'm dead. # desc
+8 # M
+2 # P
+I'm dead. # desc
+
+9 # M
+1 # P
+I'm dead. # desc
+9 # M
+2 # P
+I'm dead. # desc
+
+# LUCICADIZ
+
+25 # ndesc
+Lucía (Cadis) #nombre
+1 #id
+9 #location
+45 #coordinatex
+3 #coordinatey
+
+1 # M
+1 # P
+You may be the new one! You should know that you are a Rookie, therefore, Paquiao is your boss, go and talk to him, he's in the corridor. #description1
+1 # M
+2 # P
+Go with Paco please, I'm occupied doing nothing. #description2
+1 # M
+3 # P
+(SPLASH) I LOVE MATHS THEY ARE SO IMPRESSIVE!!! #description3
+1 # M
+4 # P
+If only I had kicked him harder... #description4
+
+2 # M
+1 # P
+If you have time to lose I think you'll be always a rookie. #description5
+2 # M
+2 # P
+Don't you see? I'm eating a tangerine #description6
+2 # M
+3 # P
+Busy thinking about which fruit I'm going to eat.  #description7
+
+3 # M
+1 # P
+If you have something important maybe you should go to library, don't bother our boss. #description8
+3 # M
+2 # P 
+Oh, you have sent the EDAT'S exam, great! #description9
+3 # M
+3 # P
+Best exam everrrr, talk to Migui, he's at the classroom 1. #description10
+
+4 # M
+1 # P
+We need SuperJuan260, he's one of the best supercolonels in the faction! #description11
+4 # M
+2 # P 
+We need SuperJuan260, he's one of the best supercolonels in the faction! #description12
+
+5 # M
+1 # P
+Oh, Andres, shut up! *her eyes light up and she smiles playfully. You can sense the chemistry*#
+5 # M
+2 # P
+Andres, could you...come a little closer... please...GET AWAY YOU CAN'T ENTER LOOSER.#
+
+6 # M
+1 # P
+I think they need you at science building. # desc
+6 # M
+2 # P
+I think they need you at science building. # desc 
+6 # M
+3 # P
+OMG THEY KILLED PAKO, I WILL TAKE REVENGE, PREPARING MY FRUITS... # desc
+6 # M
+4 # P
+OMG THEY KILLED PAKO, I WILL TAKE REVENGE, PREPARING MY FRUITS... # desc
+
+7 # M
+1 # P
+I don't know what has gone wrong. Vegetables and fruits are not harmful... #description8
+7 # M
+2 # P 
+I don't know what has gone wrong. Vegetables and fruits are not harmful... #description9
+7 # M
+3 # P
+I haven't had time for CIREL exam :( al caraho #description10
+
+8 # M 
+1 # P
+THEY HAVE HACKED OUR NETWORKS, GO TO THE LABORATORY! # desc
+8 # M
+2 # P
+Go with Rodri, hurry! # desc
+
+9 # M
+1 # P
+SAVE US ALL!!!! KARAHO GILIPOIAH TU ERE TONTO. # desc
+9 # M
+2 # P
+SAVE US ALL!!!! KARAHO GILIPOIAH TU ERE TONTO. # desc
+
+# ANDRÉS
+
+25 # ndesc
+Andrés #nombre
+2 #id
+9 #location
+47 #coordinatex
+2 #coordinatey
+
+1 # M
+1 # P
+Talk to Lucía please. #description1
+1 # M
+2 # P
+Talk to Lucía please. #description2
+1 # M
+3 # P
+Mmmm Lucía, you look very pretty today. #description3
+1 # M
+4 # P
+Lucía, do you wanna marry me? #description4
+
+2 # M
+1 # P
+Don't you realise that this is a couple talk? #description5
+2 # M
+2 # P
+Don't you realise that this is a couple talk? #description6
+2 # M
+3 # P
+I love the way Lucía throws me tangerines <3. #description7
+
+3 # M
+1 # P
+Go to library, I'm flirting. Pico-pala-pico-pala. #description8
+3 # M
+2 # P 
+Mmmmm are you sure this exam is not fake? #description9
+3 # M
+3 # P
+The exam was greatttt, I will have a 10! #description10
+
+4 # M
+1 # P
+This is a sad moment. I've just realised that Lucía's heart belongs to another man #description11
+4 # M
+2 # P
+This is a sad moment. I've just realised that Lucía's heart belongs to another man #description12
+
+5 #M
+1 #P
+Lucia, I hate your eyes!!! They are so deep and enthralling #
+5 #M
+2 #P
+*Stares deeply into Lucias eyes.* ... What? No, I haven't seen Paquiao, but you can't go in! #
+
+6 # M
+1 # P
+I don't care about Paco, better now, less rivalry. # desc
+6 # M
+2 # P
+I don't care about Paco, better now, less rivalry. # desc
+6 # M
+3 # P
+I don't care about Paco, better now, less rivalry. # desc
+6 # M
+4 # P
+I don't care about Paco, better now, less rivalry. # desc
+
+7 # M
+1 # P
+I told him that he should eat red meat to complement his diet!  #description8
+7 # M
+2 # P 
+I told him that he should eat red meat to complement his diet! #description9
+7 # M
+3 # P
+CIREL IS COMING. #description10
+
+8 # M 
+1 # P
+So, if you have important info, you should go and talk to Rodri... # desc
+8 # M
+2 # P
+Hey Lucía, I miss you when I get home... # desc
+
+9 # M
+1 # P
+I don't care about the end of the world, I want you LUCÍA. # desc
+9 # M
+2 # P
+I don't care about the end of the world, I want you LUCÍA. # desc
+
+
+# AITORMENTA
+
+25 # ndesc
+Aitormenta #nombre
+3 #id
+1 #location
+35 #coordinatex
+19 #coordinatey
+
+1 # M
+1 # P
+I was made for making photocopies. #description1
+1 # M
+2 # P
+You don't have money to pay the photocopies mmmm, maybe you should go to the Veggie restaurant, they may have some job for you. #description2
+1 # M
+3 # P
+Oh, so you finally got money, here you have, your photocopies. #description3
+1 # M
+4 # P
+You have your photocopies, MOVE! I have to play Clash Royale. #description4
+
+2 # M
+1 # P
+Clash Royaling.... #description5
+2 # M
+2 # P
+About to open a Leyendary Chest! #description6
+2 # M
+3 # P
+About to open another Leyendary Chest! #description7
+
+3 # M
+1 # P
+Oh, I think we have exam tomorrow. #description8
+3 # M
+2 # P 
+Too much Clash Royale. #description9
+3 # M
+3 # P
+So easy mannnn! #description10
+
+4 # M
+1 # P
+I really don't care about Juan. He isn't in my clan of Clash Royale. #description11
+4 # M
+2 # P 
+I really don't care about Juan. He isn't in my clan of Clash Royale. #description12
+
+5 # M
+1 # P
+What is the meaning of life? CoC... cocaine#
+5 # M
+2 # P
+Too much coke dude. #
+
+6 # M
+1 # P
+Life's difficult, but I have Clash Royale, that's enough to keep me happy. # desc
+6 # M
+2 # P
+Life's difficult, but I have Clash Royale, that's enough to keep me happy.  # desc
+6 # M
+3 # P
+Life's difficult, but I have Clash Royale, that's enough to keep me happy.  # desc
+6 # M
+4 # P
+Life's difficult, but I have Clash Royale, that's enough to keep me happy.  # desc
+
+7 # M
+1 # P
+Returning to Clash Royal #description8
+7 # M
+2 # P 
+Playing #description9
+7 # M
+3 # P
+Playing #description10
+
+8 # M 
+1 # P
+CIREL was awful... # desc
+8 # M
+2 # P
+CIREL was awful... # desc
+
+9 # M
+1 # P
+I've heard that the end is near... # desc
+9 # M
+2 # P
+I've heard that the end is near... # desc
+
+# BLANCA A
+
+25 # ndesc
+Blanca A #nombre
+4 #id
+6 #location
+62 #coordinatex
+27 #coordinatey
+
+1 # M
+1 # P
+Wow, I've heard that Andrés is going to marry Lucía!! #description1
+1 # M
+2 # P
+Do you need money? Here you have, 20€, I don't need them, I'M RICHHHHHHHHHHHHHHHH. #description2
+1 # M
+3 # P
+More money? Not today...#description3
+1 # M
+4 # P
+I LOVE MATHS... OH WAIT, NO. #description4
+
+2 # M
+1 # P
+Playing cards.... #description5
+2 # M
+2 # P
+Playing cards.... #description6
+2 # M
+3 # P
+Playing cards.... #description7
+
+3 # M
+1 # P
+Lose yourself, I have to study EDAT. #description8
+3 # M
+2 # P 
+Lose yourself, I have to study EDAT. #description9
+3 # M
+3 # P
+Wow I'm so happy with the exam. #description10
+
+4 # M
+1 # P
+Oh Juan? I really don't know him. #description11
+4 # M
+2 # P 
+Oh Juan? I really don't know him. #description12
+
+5 # M
+1 # P
+Loose yourself. Why? I dont know *INTERNAL LOGIC ERROR*#
+5 # M
+2 # P
+I heard Juan has a new penis now#
+
+6 # M
+1 # P
+Do you know how to make an interface? # desc
+6 # M
+2 # P
+Do you know how to make an interface? # desc
+6 # M
+3 # P
+Do you know how to make an interface? # desc
+6 # M
+4 # P
+Do you know how to make an interface? # desc
+
+7 # M
+1 # P
+I want to know if it's possible to take Rodri's notes... #description8
+7 # M
+2 # P 
+I want to know if it's possible to take Rodri's notes... #description9
+7 # M
+3 # P
+I want to know if it's possible to take Rodri's notes... #description10
+
+8 # M 
+1 # P
+I think I can have a 2 in the exam. # desc
+8 # M
+2 # P
+I think I can have a 2 in the exam. # desc
+
+9 # M
+1 # P
+Life's incredible! # desc
+9 # M
+2 # P
+Life's incredible! # desc
+
+# Nuria
+
+25 # ndesc
+Nuria (Happy Woman) #nombre
+5 #id
+4 #location 
+60 #coordinatex
+22 #coordinatey
+
+1 # M
+1 # P
+Hey there, I'm Nuria, and I'm very happy because happiness give happy feelings. #description1
+1 # M
+2 # P 
+Hey there, I'm Nuria, and I'm very happy because happiness give happy feelings. #description2
+1 # M
+3 # P
+Ummm... I think I miss something... #description3
+1 # M
+4 # P
+Oh my gosh, I think I've lost my phone, please, please, bring it back to meee pleaseee I need to "spread happinessssssssssss". #description4 
+
+2 # M
+1 # P
+If you don't hurry Yujiakers'll find it first and it'll be the end of our faction! #description5
+2 # M
+2 # P
+Oh! <3.You can't imagine how grateful am I. Tell Sexy Canario about your success. I have to encrypt this data right now.#description6
+2 # M
+3 # P
+Encrypting data. Later we'll talk and celebrate. #description7
+
+3 # M
+1 # P
+Are you going to the library? #description8
+3 # M
+2 # P 
+Are you going to the library? #description9
+3 # M
+3 # P
+It was easyyyyyyy wiiii. #description10
+
+4 # M
+1 # P
+I miss Juan and our "She's so lovely"'s dance :(. #description11
+4 # M
+2 # P 
+I miss Juan and our "She's so lovely"'s dance :(. #description12
+
+5 # M
+1 # P
+Im so haaappyy. #
+5 # M
+2 # P
+Im even happier. How is that possible? Magic and unicorns. #
+
+6 # M
+1 # P
+Poor Paquiao, I am not feeling happy today... # desc
+6 # M
+2 # P
+Poor Paquiao, I am not feeling happy today... # desc
+6 # M
+3 # P
+Poor Paquiao, I am not feeling happy today... # desc
+6 # M
+4 # P
+Poor Paquiao, I am not feeling happy today... # desc
+
+7 # M
+1 # P
+Poor Rodri... #description8
+7 # M
+2 # P 
+Poor Rodri... #description9
+7 # M
+3 # P
+Poor Rodri... #description10
+
+8 # M 
+1 # P
+Óscar Dropbox is there! He's hacking the Network! # desc
+8 # M
+2 # P
+Go and talk with Rodri! # desc
+
+9 # M
+1 # P
+Because I'm happy. # desc
+9 # M
+2 # P
+Because I'm happy. # desc
+
+# Oscar Canario
+
+25 # ndesc
+Oscar (Sexy Canario) #nombre
+6 #id
+4 #location
+50 #coordinatex
+19 #coordinatey
+
+1 # M
+1 # P
+Hello! I'm Oscar Canario #description1
+1 # M
+2 # P 
+Don't bother me! I'm playing LOL. #description2
+1 # M
+3 # P
+Don't bother me! I'm playing LOL. #description3
+1 # M
+4 # P
+Agg, I've just lost a game! TALK TO NURIA AND GO AWAY YOU ROOKIE MAN! THERE IS CONFIDENTIAL INFORMATION IN HER PHONE. #description4 
+
+2 # M
+1 # P
+Still angry. Go away and do your homework. Grr... #description5
+2 # M
+2 # P
+Still angry. Go away and do your homework. Grr... #description6
+2 # M
+3 # P
+Wow, something good in this horrible day. Keep working this way, btw someone of the above is waiting for you at the HALL. #description7
+
+3 # M
+1 # P
+EDAT I'm afraid. #description8
+3 # M
+2 # P 
+EDAT I'm afraid. #description9
+3 # M
+3 # P
+EDAT was so easy. #description10
+
+4 # M
+1 # P
+Wanna ilegal tobacco from Guanches' Islands? #description11
+4 # M
+2 # P 
+Wanna ilegal tobacco from Guanches' Islands? #description12
+
+5 # M
+1 # P
+Want illegal organs from guanches? #
+5 # M
+2 # P
+Want illegal slaves from guanches? #
+
+6 # M
+1 # P
+Want illegal drugs from guanches? # desc
+6 # M
+2 # P
+Want illegal drugs from guanches?  # desc
+6 # M
+3 # P
+Want illegal drugs from guanches?  # desc
+6 # M
+4 # P
+Want illegal drugs from guanches?  # desc
+
+7 # M
+1 # P
+If Rodri falls I'll be the very boss...Oh! Did I say that out loud? #description8
+7 # M
+2 # P 
+If Rodri falls I'll be the very boss...Oh! Did I say that out loud? #description9
+7 # M
+3 # P
+If Rodri falls I'll be the very boss...Oh! Did I say that out loud? #description10
+
+8 # M 
+1 # P
+THEY ARE HACKING THE NETWORK! # desc
+8 # M
+2 # P
+Go with Rodri. # desc
+
+9 # M
+1 # P
+I want to break free. # desc
+9 # M
+2 # P
+I want to break free. # desc
+
+# Nacho 
+
+25 # ndesc
+Nachete Machote #nombre
+7 #id
+0 #location
+40 #coordinatex
+16 #coordinatey
+
+1 # M
+1 # P
+Go left!! Yujiackers BEST TEAMMMM!!!!#description1
+1 # M
+2 # P 
+Oh... you chose Veggies... okey... okey...#description2
+1 # M
+3 # P
+Don't talk to me nerd.#description3
+1 # M
+4 # P
+TENNIS FINAL, THIS FRIDAY!!! #description4 
+
+2 # M
+1 # P
+TENNIS FINAL, THIS FRIDAY!!! #description5
+2 # M
+2 # P
+I'm so stronggggggg, strong enough to break a PEANO'S AXIOM!! #description6
+2 # M
+3 # P
+I'm so stronggggggg, strong enough to break a PEANO'S AXIOM!! #description7
+
+3 # M
+1 # P
+I'm going to the library to study EDAT. #description8
+3 # M
+2 # P 
+I'm going to the library to study EDAT. #description9
+3 # M
+3 # P
+So easy! #description10
+
+4 # M
+1 # P
+The last time I saw SuperJuan260 he were wearing kind of brundanga's face. #description11
+4 # M
+2 # P 
+The last time I saw SuperJuan260 he were wearing kind of brundanga's face. #description12
+
+5 # M
+1 # P
+Peano broke me... How did it happen? #
+5 # M
+2 # P
+I shall break all mathematics in revenge AAAHHHHHH *POWER LEVEL OVER 9000* #
+
+6 # M
+1 # P
+Honky tonight? # desc
+6 # M
+2 # P
+Honky tonight? # desc
+6 # M
+3 # P
+Honky tonight? # desc
+6 # M
+4 # P
+Honky tonight? # desc
+
+7 # M
+1 # P
+CIREL's exam already studied #description8
+7 # M
+2 # P 
+CIREL's exam already studied #description9
+7 # M
+3 # P
+CIREL's exam already studied #description10
+
+8 # M 
+1 # P
+My broda Óscar is hacking uajajajjajajja # desc
+8 # M
+2 # P
+CIREL WAS HORRIBLEEEEE. # desc
+
+9 # M
+1 # P
+I've a dream. # desc
+9 # M
+2 # P
+I've a dream. # desc
+
+# Fons
+
+25 # ndesc
+Fons #nombre
+8 #id
+0 #location
+47 #coordinatex
+17 #coordinatey
+
+1 # M
+1 # P
+Go right dude, to the meeting room, plenty of great things are coming!!(And you've already chosen in the StartScreen tho). #description1
+1 # M
+2 # P 
+GLUTEN NO IS NOT MY FRIENDDD NOT MY FRIENDDD ANYMOREEEEE. #description2
+1 # M
+3 # P
+GLUTEN NO IS NOT MY FRIENDDD NOT MY FRIENDDD ANYMOREEEEE.  #description3
+1 # M
+4 # P
+Oh dear, I need a joint. #description4 
+
+2 # M
+1 # P
+Oh dear, I need a joint. #description5
+2 # M
+2 # P
+Do you know Javi's? #description6
+2 # M
+3 # P
+Do you know Javi's? #description7
+
+3 # M
+1 # P
+You should go to the library. #description8
+3 # M
+2 # P 
+Thank's for sending the exam! #description9
+3 # M
+3 # P
+Talk to Migui. #description10
+
+4 # M
+1 # P
+Fucking Platanita! She stole my cigarettes... #description11
+4 # M
+2 # P 
+Fucking Platanita! She stole my cigarettes... #description12
+
+5 # M
+1 # P
+Joints give me power. Also, they are good for ED #
+5 # M
+2 # P
+And by ED I mean Erectile Dysfunction #
+
+6 # M
+1 # P
+I want chocolate, but I can't eat gluten, my life is horrible... # desc
+6 # M
+2 # P
+I want chocolate, but I can't eat gluten, my life is horrible... # desc
+6 # M
+3 # P
+Oh give me that non-gluten chocolate!! Mmmmm, here you have, joint, only for personal use, if not, I'M IN BIG TROUBLE! # desc
+6 # M
+4 # P
+I won't give more joint, I need it DO YOU UNDERSTAND? # desc
+
+7 # M
+1 # P
+There's going to be a muse tournament at the Asturian's restaurant. #description8
+7 # M
+2 # P 
+There's going to be a muse tournament at the Asturian's restaurant. #description9
+7 # M
+3 # P
+There's going to be a muse tournament at the Asturian's restaurant. #description10
+
+8 # M 
+1 # P
+I have NP in the exam. What's that? # desc
+8 # M
+2 # P
+I have NP in the exam. What's that? # desc
+ 
+9 # M
+1 # P
+Javi's is my way of life. # desc
+9 # M
+2 # P
+Javi's is my way of life. # desc
+ 
+
+
+# GR7
+
+25 # ndesc
+GR7 #nombre
+9 #id
+14 #location
+60 #coordinatex
+20 #coordinatey
+
+1 # M
+1 # P
+We don't talk to plants' murders, Veggie -.- #description1
+1 # M
+2 # P 
+We don't talk to plants' murders, Veggie -.- #description2
+1 # M
+3 # P
+We don't talk to plants' murders, Veggie -.-  #description3
+1 # M
+4 # P
+We don't talk to plants' murders, Veggie -.- #description4 
+
+2 # M
+1 # P
+You are crazy if you think we're going to give you the phone. Don't even try to "askfor" it. #description5
+2 # M
+2 # P
+Fucking CoP. We can't do anything against it. #description6
+2 # M
+3 # P
+You'll regret this humiliation. #description7
+
+3 # M
+1 # P
+Goodbye losser. #description8
+3 # M
+2 # P 
+Goodbye losser. #description9
+3 # M
+3 # P
+Goodbye losser. #description10
+
+4 # M
+1 # P
+I heard some screams coming from the Sciences Building ;) #description11
+4 # M
+2 # P 
+I heard some screams coming from the Sciences Building ;) #description12
+
+5 # M
+1 # P
+I heard some more screams.... from my basement. Lets hope the police dont notice #
+5 # M
+2 # P
+I have a free place in my basement for you... Happy dreams <3#
+
+6 # M
+1 # P
+I think Paco is dead... # desc
+6 # M
+2 # P
+I think Paco is dead... # desc
+6 # M
+3 # P
+I think Paco is dead... # desc
+6 # M
+4 # P
+I think Paco is dead... # desc
+
+7 # M
+1 # P
+The end of your leader is about time. #description8
+7 # M
+2 # P 
+The end of your leader is about time. #description9
+7 # M
+3 # P
+The end of your leader is about time. #description10
+
+8 # M 
+1 # P
+I think I'm dead. # desc
+8 # M
+2 # P
+Hello from the other sideeeeeeeeeee. # desc
+
+9 # M
+1 # P
+Hello from the other sideeeeeeeeeee. # desc
+9 # M
+2 # P
+Hello from the other sideeeeeeeeeee. # desc
+
+# Anthony
+
+25 # ndesc
+Anthony() #nombre
+10 #id
+14 #location
+60 #coordinatex
+21 #coordinatey
+
+1 # M
+1 # P
+With all of you here, soon there's going to be no garden to walk around... #description1
+1 # M
+2 # P 
+With all of you here, soon there's going to be no garden to walk around... #description2
+1 # M
+3 # P
+With all of you here, soon there's going to be no garden to walk around... #description3
+1 # M
+4 # P
+With all of you here, soon there's going to be no garden to walk around... #description4 
+
+2 # M
+1 # P
+What are you going to do? "Askfor" it? #description5
+2 # M
+2 # P
+Fucking CoP. We can't do anything against it. #description6
+2 # M
+3 # P
+We'll have our revenge at EDAT's exam #description7
+
+3 # M
+1 # P
+Go away. #description8
+3 # M
+2 # P 
+Go away. #description9
+3 # M
+3 # P
+Go away. #description10
+
+4 # M
+1 # P
+Revenge:) #description11
+4 # M
+2 # P 
+Revenge:) #description12
+
+5 # M
+1 # P
+*He seems to be singing* This is how to be a heartbreaaaaker.#
+5 # M
+2 # P
+*He has a  very pretty girl by his side and smiles* #
+
+6 # M
+1 # P
+Get losttttt!! # desc
+6 # M
+2 # P
+Get losttttt!!  # desc
+6 # M
+3 # P
+Get losttttt!!  # desc
+6 # M
+4 # P
+Get losttttt!!  # desc
+
+7 # M
+1 # P
+Tick tack tick tack #description8
+7 # M
+2 # P 
+Tick tack tick tack #description9
+7 # M
+3 # P
+Tick tack tick tack #description10
+
+8 # M 
+1 # P
+Are you dead? # desc
+8 # M
+2 # P
+I'm dead. # desc
+
+9 # M
+1 # P
+Hello from the other sideeeeeeeeeee. # desc
+9 # M
+2 # P
+Hello from the other sideeeeeeeeeee. # desc
+
+# Villar
+
+25 # ndesc
+Villar #nombre
+11 #id
+11 #location
+16 #coordinatex
+16 #coordinatey
+
+1 # M
+1 # P
+I'm SO HIGHHHHHHHHHHHHHHHHHHHHHHHH. #description1
+1 # M
+2 # P 
+I'm SO HIGHHHHHHHHHHHHHHHHHHHHHHHH. #description2
+1 # M
+3 # P
+Diamonds are forever but the sky has no limits in the horizon, maybe the shoreline... #description3
+1 # M
+4 # P
+Diamonds are forever but the sky has no limits in the horizon, maybe the shoreline... #description4 
+
+2 # M
+1 # P
+SO HIGHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH. #description5
+2 # M
+2 # P
+Diamonds are forever but the sky has no limits in the horizon, maybe the shoreline... #description6
+2 # M
+3 # P
+SO HIGHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH. #description7
+
+3 # M
+1 # P
+I'm so high, but that EDAT exam you have seem so very real, trust me ma friend!!! woaaaahhhhh  TRUSTING IS TRUST 4 LIFE & ALWAYS.#description8
+3 # M
+2 # P 
+So you decided to send that exam to your group!! Good decision go to Classroom 1 YOU'RE THE BEST MA NIGGI BEST ALLWAYS G8. #description9
+3 # M
+3 # P
+Woah the exam was so EASSYYYYYSYSYYSYYYYY. #description10
+
+4 # M
+1 # P
+It's easy, isn't it? #description11
+4 # M
+2 # P 
+It's easy, isn't it? #description12
+
+5 # M
+1 # P
+50% of marriages end in divorce. People marry in their 30s. They use their 20s to "find themselves". #
+5 # M
+2 # P
+Humans need a belief system. Leftism is an evolutionary fit memeplex of psychopathic status maximizers. #
+
+6 # M
+1 # P
+If life's a race, I'm winning FOR SUREEEEEEEE. # desc
+6 # M
+2 # P
+If life's a race, I'm winning FOR SUREEEEEEEE. # desc
+6 # M
+3 # P
+If life's a race, I'm winning FOR SUREEEEEEEE. # desc
+6 # M
+4 # P
+If life's a race, I'm winning FOR SUREEEEEEEE. # desc
+
+7 # M
+1 # P
+His illness is due to a lack of joint.  #description8
+7 # M
+2 # P 
+His illness is due to a lack of joint. #description9
+7 # M
+3 # P
+His illness is due to a lack of joint. #description10
+
+8 # M 
+1 # P
+Wowowo the exam was too difficult mannnnn INCREDIBLE AMAZING. # desc
+8 # M
+2 # P
+Wowowo the exam was too difficult mannnnn INCREDIBLE AMAZING. # desc
+
+9 # M
+1 # P
+Wow that book has just appear, Am I high? SUREEEEEEEEEEEEEEEEE # desc
+9 # M
+2 # P
+Wow that book has just appear, Am I high? SUREEEEEEEEEEEEEEEEE # desc
+
+# The Great Mike
+
+25 # ndesc
+The Great Mike #nombre
+12 #id
+10 #location
+66 #coordinatex
+25 #coordinatey
+
+1 # M
+1 # P
+Just playing LOL. #description1
+1 # M
+2 # P 
+Just playing LOL. #description2
+1 # M
+3 # P
+Just playing LOL. #description3
+1 # M
+4 # P
+Just playing LOL. #description4 
+
+2 # M
+1 # P
+Hi there Rookie #description5
+2 # M
+2 # P
+Just playing LOL. #description6
+2 # M
+3 # P
+Hi there. #description7
+
+3 # M
+1 # P
+Wowo, go to the library to prepare the EDAT exam! #description8
+3 # M
+2 # P 
+Wowo I guess I have to study more. #description9
+3 # M
+3 # P
+Now, you are a Sergeant due to your help in this exam, nevertheless, SUPERJUAN260 has been kidnapped, talk to Paquiao and Andrea. #description10
+
+4 # M
+1 # P
+I've never talked so much in my whole life! #description11
+4 # M
+2 # P 
+I've never talked so much in my whole life! #description12
+
+5 # M
+1 # P
+Have you heard what Alphonse is saying? He seems a bit red #
+5 # M
+2 # P
+I cant talk anymore... #
+
+6 # M
+1 # P
+(...) # desc
+6 # M
+2 # P
+(...) # desc
+6 # M
+3 # P
+(...) # desc
+6 # M
+4 # P
+(...) # desc
+
+7 # M
+1 # P
+(...) #description8
+7 # M
+2 # P 
+(...) #description9
+7 # M
+3 # P
+(...) #description10
+
+8 # M 
+1 # P
+CIREL WAS HORRIBLEEEEE BUT THEY ARE HACKING USSSS GO TO THE LAB # desc
+8 # M
+2 # P
+(...) # desc
+
+9 # M
+1 # P
+(...) # desc
+9 # M
+2 # P
+(...) # desc
+
+#Andrea
+
+25 # ndesc
+Andrea # name
+13 #id
+3 #location
+40 #coordinatex
+12 #coordinatey
+
+1 # M
+1 # P
+*You can feel a cold shudder on the back of your neck* Hello, I am Lilith.. I mean, Andrea. Yeah, sure, thats my name, Andrea. #description1
+1 # M
+2 # P 
+*You can feel your soul pierced by her icy eyes* One day soon, i will have my revenge on humanity... hahahaha JK lol xD #description2
+1 # M
+3 # P
+*She seems busy reading a book. You take a peak...  "Necromicron For Dummies" * #description3
+1 # M
+4 # P
+*You accidentaly touch her hand. Your finger freezes an breaks instantly* Oh hahaha sorry. I can be a bit ~~cold~~ sometimes #description4 
+
+2 # M
+1 # P
+I lost my soul a long time ago... hahaha I mean I lost my pencil, could you find it please? #description5
+2 # M
+2 # P
+What? A dead body was found with my pencil stuck in its head? What pencil? I never had a pencil... NEVER #description6
+2 # M
+3 # P
+If only he were here... *She seems to be lost in thought*#description7
+
+3 # M
+1 # P
+*A man stand in front of her* Here is your tribute mistress... Please dont kill me! I have a family!#description8
+3 # M
+2 # P 
+He never comes back,  but his memories do... *A tear drops down her cheek. It freezes and falls to the ground, shattering* #description9
+3 # M
+3 # P
+*Andrea seems very happy, and there isnt a single dead body nearby. Strange...*#description10
+
+4 # M
+1 # P
+You have to open the WATER SUPPLY with the Key located in the PARKING and then break the WATER SUPPLY to create a distraction. #description11
+4 # M
+2 # P 
+Have you forgot your mission? Key to the WATTER SUPPLY in the PARKING and break the WATER SUPPLY. As soon as possible. #description12
+
+5 # M
+1 # P
+How are you going? #
+5 # 
+2 # P
+How are you going? #description1
+
+6 # M
+1 # P
+THEY NEED YOU AT SCIENCE BUILDING! # desc
+6 # M
+2 # P
+THEY NEED YOU AT SCIENCE BUILDING! # desc
+6 # M
+3 # P
+THEY NEED YOU AT SCIENCE BUILDING! # desc
+6 # M
+4 # P
+I think Rodri need's you. # desc
+
+7 # M
+1 # P
+I told you to speak at our very boss. #description8
+7 # M
+2 # P 
+Helloooo. #description9
+7 # M
+3 # P
+Hellooooo. #description10
+
+8 # M 
+1 # P
+THEY ARE HACKING USSSSSS, btw, CIREL... # desc
+8 # M
+2 # P
+Go to science! # desc
+
+9 # M
+1 # P
+THE END IS NEAR. # desc
+9 # M
+2 # P
+THE END IS NEAR. # desc
+
+# JezuDani
+
+25 # ndesc
+JezuDani #nombre
+14 #id
+6 #location
+71 #coordinatex
+23 #coordinatey
+
+1 # M
+1 # P
+All the single ladies. #description1
+1 # M
+2 # P 
+All the single ladies. #description1
+1 # M
+3 # P
+Hello, it's meeeeee. #description1
+1 # M
+4 # P
+What do you want? #description1
+
+2 # M
+1 # P
+What do you want? #description1
+2 # M
+2 # P
+All the single ladies. #description1
+2 # M
+3 # P
+Maybe lettuce? #description1
+
+3 # M
+1 # P
+Maybe lettuce? #description1
+3 # M
+2 # P 
+Maybe lettuce? #description1
+3 # M
+3 # P
+Hello, it's meeee. #description1 
+
+4 # M
+1 # P
+Today's menu!! Super tasty!! #description1
+4 # M
+2 # P 
+Today's menu!! Super tasty!! #description1
+
+5 # M
+1 # P
+Maybe you could use the knife to force the door and "openwith" it, follow the path and you will end at...#
+5 # M
+2 # P
+Maybe you could use the knife to force the door and "openwith" it, follow the path and you will end at... #description1
+
+6 # M
+1 # P
+Do you know who was my invisible friend last year? # desc
+6 # M
+2 # P
+Do you know who was my invisible friend last year? # desc
+6 # M
+3 # P
+Do you know who was my invisible friend last year? # desc
+6 # M
+4 # P
+Do you know who was my invisible friend last year? # desc
+
+7 # M
+1 # P
+I have to do the laundry. #description8
+7 # M
+2 # P 
+I have to do the laundry. #description9
+7 # M
+3 # P
+I have to do the laundry. #description10
+
+8 # M 
+1 # P
+I think I can have... o, I remember, I didn't the exam... # desc
+8 # M
+2 # P
+I think I can have... o, I remember, I didn't the exam... # desc
+
+9 # M
+1 # P
+Do you want to play Parchis? # desc
+9 # M
+2 # P
+Do you want to play Parchis? # desc
+
+# RodriVeggie
+
+25 # ndesc
+Mr D. Pool (THE BOSS) #nombre
+15 #id
+8 #location
+7 #coordinatex
+8 #coordinatey
+
+
+1 # M
+1 # P
+Hello #description1
+1 # M
+2 # P 
+Hello #description1
+1 # M
+3 # P
+Hello #description1
+1 # M
+4 # P
+Hello #description1
+
+2 # M
+1 # P
+Hello #description1
+2 # M
+2 # P
+Hello #description1
+2 # M
+3 # P
+Hello #description1
+
+3 # M
+1 # P
+Hello #description1
+3 # M
+2 # P 
+Hello #description1
+3 # M
+3 # P
+
+Hello #description1 
+4 # M
+1 # P
+Hello #description1
+4 # M
+2 # P 
+Hello #description1
+
+5 # M
+1 # P
+I'm useful at mision 5-2 #
+5 # M
+2 # P
+So, that's the situation?YOU MUST SAVE HIM,you can be a Colonel now.Go to the Science building and take this icicle gun!Just "askfor" me.#description1
+
+6 # M
+1 # P
+They need you at science, GOOO! # desc
+6 # M
+2 # P
+They need you at science, GOOO! # desc
+6 # M
+3 # P
+They need you at science, GOOO! # desc
+6 # M
+4 # P
+They need you at science, GOOO! # desc
+
+7 # M
+1 # P
+I'm very sick of Veg food. I need something different to recover myself. Something like ASTURIAN food. Please, carry me a CACHOPO.#description8
+7 # M
+2 # P 
+Please... ugh... Cachopo... #description9
+7 # M
+3 # P
+I'm so greatful. Please, "give" it to me. I promote you to the rank of LIUTENANT. Congrats! Now, go to Classroom 1, CIREL awaits... #description10
+
+8 # M 
+1 # P
+If you have important info for me, just "give" me the "PEN". # desc
+8 # M
+2 # P
+Wow... WE NEED TO STOP THEM, RUN, YOU ARE NOW A CAPTAIN, GO TO SCIENCE AND STOP THEIR PLANS! # desc
+
+9 # M
+1 # P
+SAVE USSSSSSSS. # desc
+9 # M
+2 # P
+SAVE USSSSSSSSSSSSSSSSSSSSSS. # desc
+
+# Richi 
+
+25 # ndesc
+Richi #nombre
+16 #id
+16 #location
+30 #coordinatex
+21 #coordinatey
+
+1 # M
+1 # P
+Hey there! #description1
+1 # M
+2 # P 
+Hey there! #description2
+1 # M
+3 # P
+Hey there! #description3
+1 # M
+4 # P
+Hey there! #description4 
+
+2 # M
+1 # P
+I like when I come home and I can pop. #description5
+2 # M
+2 # P
+I like when I come home and I can pop. #description6
+2 # M
+3 # P
+I like when I come home and I can pop. #description7
+
+3 # M
+1 # P
+I like when I come home and I can pop. #description8
+3 # M
+2 # P 
+I like when I come home and I can pop. #description9
+3 # M
+3 # P
+I like when I come home and I can pop. #description10
+
+4 # M
+1 # P
+Popping is my way of life. #description11
+4 # M
+2 # P 
+Popping is my way of life. #description12
+
+5 # M
+1 # P
+Oh God I'm lateeeee. #
+5 # M
+2 # P
+Oh God I'm lateeeee. #
+
+6 # M
+1 # P
+Paco did't want my non-gluten chocolate, so that's why we had to kill him... I suppose... # desc
+6 # M
+2 # P
+I hate Adri, he's really good at clash royale, I think he's at classroom 2. # desc
+6 # M
+3 # P
+Fons has been too high recently...# desc
+6 # M
+4 # P
+Oh, why? # desc
+
+7 # M
+1 # P
+He'll be better if he pops. #description8
+7 # M
+2 # P 
+He'll be better if he pops. #description9
+7 # M
+3 # P
+He'll be better if he pops. #description10
+
+8 # M 
+1 # P
+CIREL exam makes me want to pop... # desc
+8 # M
+2 # P
+CIREL exam makes me want to pop... # desc
+
+9 # M
+1 # P
+POP POP POP. NON STOP. # desc
+9 # M
+2 # P
+POP POP POP. NON STOP. # desc
+
+# Jandrov
+
+25 # ndesc
+Jandrov #nombre
+17 #id
+16 #location
+35 #coordinatex
+22 #coordinatey
+
+1 # M
+1 # P
+I'm talking with Richi please. #description1
+1 # M
+2 # P 
+I'm talking with Richi please. #description2
+1 # M
+3 # P
+I'm talking with Richi please. #description3
+1 # M
+4 # P
+I'm talking with Richi please. #description4 
+
+2 # M
+1 # P
+I cant't go out tonight, I have training. #description5
+2 # M
+2 # P
+I cant't go out tonight, I have training. #description6
+2 # M
+3 # P
+I cant't go out tonight, I have training. #description7
+
+3 # M
+1 # P
+I cant't go out tonight, I have training. #description8
+3 # M
+2 # P 
+I cant't go out tonight, I have training. #description9
+3 # M
+3 # P
+I cant't go out tonight, I have training. #description10
+
+4 # M
+1 # P
+I cant't go out tonight, I have training. #description11
+4 # M
+2 # P 
+I love basketballlllll. #description12
+
+5 # M
+1 # P
+I love basketballlll. #
+5 # M
+2 # P
+I love basketballllll. #
+
+6 # M
+1 # P
+Paquiao screamed a lot when we killed him, I think everybody has heart him. # desc
+6 # M
+2 # P
+Do you know how difficult is having a partner of lab but not having him/her? By the way, go to classroom 2. # desc
+6 # M
+3 # P
+I love Plaza, I always eat there! # desc
+6 # M
+4 # P
+I love Plaza, I always eat there! # desc
+
+7 # M
+1 # P
+Do you know how difficult is having a partner of lab but not having him/her? #description8
+7 # M
+2 # P 
+Do you know how difficult is having a partner of lab but not having him/her? #description9
+7 # M
+3 # P
+Do you know how difficult is having a partner of lab but not having him/her? #description10
+
+8 # M 
+1 # P
+Oh nice gun. # desc
+8 # M
+2 # P
+Oh nice gun. # desc
+
+9 # M
+1 # P
+Hello Santini. # desc
+9 # M
+2 # P
+Hello Santini. # desc
+
+# Victor
+
+25 # ndesc
+Víctor #nombre
+18 #id
+17 #location
+60 #coordinatex
+3 #coordinatey
+
+1 # M
+1 # P
+Wuauuu so murky. #description1
+1 # M
+2 # P 
+Wuauuu so murky. #description2
+1 # M
+3 # P
+Wuauuu so murky. #description3
+1 # M
+4 # P
+Wuauuu so murky. #description4 
+
+2 # M
+1 # P
+Wuauuu so murky. #description5
+2 # M
+2 # P
+Wuauuu so murky. #description6
+2 # M
+3 # P
+Wuauuu so murky. #description7
+
+3 # M
+1 # P
+I want jointtttt I'm getting crazyyyyy. #description8
+3 # M
+2 # P 
+I want jointtttt I'm getting crazyyyyy. #description9
+3 # M
+3 # P
+I want jointtttt I'm getting crazyyyyy. #description10
+
+4 # M
+1 # P
+I want jointtttt I'm getting crazyyyyy. #description11
+4 # M
+2 # P 
+I want jointtttt I'm getting crazyyyyy. #description12
+
+5 # M
+1 # P
+Oh hey there, do you have some joint?#
+5 # M
+2 # P
+Oh hey there, do you have some joint? #
+
+6 # M
+1 # P
+I wanttttttt to be highhhh foreverrrr and everrrrrrr. # desc
+6 # M
+2 # P
+Do you have some joint? I have something you may need, if you bring me some, maybe... # desc
+6 # M
+3 # P
+Come on, give us joint pleaseeee, I will compose some rap for you!# desc
+6 # M
+4 # P
+Ohh greatttt! here you have, the kidnapped room's key (Key2) "askfor" it! # desc
+
+7 # M
+1 # P
+So they were there... interesting... #description8
+7 # M
+2 # P 
+Joint :( #description9
+7 # M
+3 # P
+Joint :( #description10
+
+8 # M 
+1 # P
+CIREL = LOL # desc
+8 # M
+2 # P
+CIREL = LOL # desc
+
+9 # M
+1 # P
+LOL XD. # desc
+9 # M
+2 # P
+LOL XD. # desc
+
+# Adri
+
+25 # ndesc
+Adri #nombre
+19 #id
+17 #location
+70 #coordinatex
+3 #coordinatey
+
+1 # M
+1 # P
+This degree is so stressful... #description1
+1 # M
+2 # P 
+This degree is so stressful... #description2
+1 # M
+3 # P
+This degree is so stressful... #description3
+1 # M
+4 # P
+This degree is so stressful... #description4 
+
+2 # M
+1 # P
+This degree is so stressful... #description5
+2 # M
+2 # P
+This degree is so stressful... #description6
+2 # M
+3 # P
+This degree is so stressful... #description7
+
+3 # M
+1 # P
+Why do I still remain here? #description8
+3 # M
+2 # P 
+Why do I still remain here? #description9
+3 # M
+3 # P
+Why do I still remain here? #description10
+
+4 # M
+1 # P
+Why do I still remain here? #description11
+4 # M
+2 # P 
+Why do I still remain here? #description12
+
+5 # M
+1 # P
+Wow Víctor I want a joint too...#
+5 # M
+2 # P
+Wow Víctor I want a joint too... #
+
+6 # M
+1 # P
+I'm at Arena 9, Richi noob! # desc
+6 # M
+2 # P
+Please talk to Victor pleaseee, we need something. # desc
+6 # M
+3 # P
+Bring us the joint and magic will happen. # desc
+6 # M
+4 # P
+Yeaaaah, now go away and pretend you have not seen us. # desc
+
+7 # M
+1 # P
+Waiting for the third season of Rick and Morty #description8
+7 # M
+2 # P 
+Waiting for the third season of Rick and Morty #description9
+7 # M
+3 # P
+Waiting for the third season of Rick and Morty #description10
+
+8 # M 
+1 # P
+wowooooo I think I can pass CIREL... WAIT... nope. # desc
+8 # M
+2 # P
+wowooooo I think I can pass CIREL... WAIT... nope. # desc
+
+9 # M
+1 # P
+THE END IS NEARRRRRR. # desc
+9 # M
+2 # P
+I DON'T CARE. # desc
+
+# SuperJuan260
+
+25 # ndesc
+SuperJuan260 #nombre
+20 #id
+18 #location
+5 #coordinatex
+20 #coordinatey
+
+1 # M
+1 # P
+If you are reading this, you've done something wrong. #description1
+1 # M
+2 # P 
+If you are reading this, you've done something wrong. #description2
+1 # M
+3 # P
+If you are reading this, you've done something wrong. #description3
+1 # M
+4 # P
+If you are reading this, you've done something wrong. #description4 
+
+2 # M
+1 # P
+If you are reading this, you've done something wrong. #description5
+2 # M
+2 # P
+If you are reading this, you've done something wrong. #description6
+2 # M
+3 # P
+If you are reading this, you've done something wrong. #description7
+
+3 # M
+1 # P
+If you are reading this, you've done something wrong. #description8
+3 # M
+2 # P 
+If you are reading this, you've done something wrong. #description9
+3 # M
+3 # P
+If you are reading this, you've done something wrong. #description10
+
+4 # M
+1 # P
+If you are reading this, you've done something wrong. #description11
+4 # M
+2 # P 
+If you are reading this, you've done something wrong. #description12
+
+5 # M
+1 # P
+If you are reading this, you've done something wrong. #
+5 # M
+2 # P
+If you are reading this, you've done something wrong. #
+
+6 # M
+1 # P
+I'm in prison. # desc
+6 # M
+2 # P
+I'm in prison. # desc
+6 # M
+3 # P
+I'm in prison. # desc
+6 # M
+4 # P
+OH MY GOD, THANK YOU SO MUCH I LOVE YOU, I WAS IMPRISONED AND NOW I'M FREE YUHUUUUUUU let's go to EPS.# desc
+
+7 # M
+1 # P
+So greatful but you have to talk to Mr D. Pool. #description8
+7 # M
+2 # P 
+I don't want to talk about what happened in the kindnapping.... #description9
+7 # M
+3 # P
+I don't want to talk about what happened in the kindnapping.... #description10
+
+8 # M 
+1 # P
+YIA MAN HORRIBLE EXAM... # desc
+8 # M
+2 # P
+YIA MAN HORRIBLE EXAM... # desc
+
+9 # M
+1 # P
+THE END IS NEAR, BUT AT LEAST I HAVE MY PIANO. # desc
+9 # M
+2 # P
+THE END IS NEAR, BUT AT LEAST I HAVE MY PIANO. # desc
+
+
+# Santi
+
+25 # ndesc
+Santi (Chandal-man) #nombre
+21 #id
+15 #location
+50 #coordinatex
+6 #coordinatey
+
+1 # M
+1 # P
+This job is awful. Wearing sport clothes is forbidden. #description1
+1 # M
+2 # P 
+This job is awful. Wearing sport clothes is forbidden. #description2
+1 # M
+3 # P
+This job is awful. Wearing sport clothes is forbidden. #description3
+1 # M
+4 # P
+This job is awful. Wearing sport clothes is forbidden. #description4 
+
+2 # M
+1 # P
+Don't tell Aitormenta that I'm here please. #description5
+2 # M
+2 # P
+Don't tell Aitormenta that I'm here please. #description6
+2 # M
+3 # P
+Don't tell Aitormenta that I'm here please. #description7
+
+3 # M
+1 # P
+Working here is not as bad as I thought. I can eat Cachopo whenever I want to. #description8
+3 # M
+2 # P 
+Working here is not as bad as I thought. I can eat Cachopo whenever I want to. #description9
+3 # M
+3 # P
+Working here is not as bad as I thought. I can eat Cachopo whenever I want to. #description10
+
+4 # M
+1 # P
+Working here is not as bad as I thought. I can eat Cachopo whenever I want to. #description11
+4 # M
+2 # P 
+Working here is not as bad as I thought. I can eat Cachopo whenever I want to. #description12
+
+5 # M
+1 # P
+Working here is not as bad as I thought. I can eat Cachopo whenever I want to. #
+5 # M
+2 # P
+Working here is not as bad as I thought. I can eat Cachopo whenever I want to. #
+
+6 # M
+1 # P
+Cachopo for you, cachopo for me... # desc
+6 # M
+2 # P
+Cachopo for you, cachopo for me... # desc
+6 # M
+3 # P
+Cachopo for you, cachopo for me... # desc
+6 # M
+4 # P
+Cachopo for you, cachopo for me... # desc
+
+7 # M
+1 # P
+We're about to start giving Cachopos for free. It's Cows Day! #description8
+7 # M
+2 # P 
+If you want a Cachopo you just have to "askfor" it. It's free! #description9
+7 # M
+3 # P
+One Cachopo per person, dude. #description10
+
+8 # M 
+1 # P
+I thought I could pass CIREL... # desc
+8 # M
+2 # P
+I thought I could pass CIREL... # desc
+
+9 # M
+1 # P
+I don't care. # desc
+9 # M
+2 # P
+I don't care. # desc
+ 
+# Óscar Dropbox
+
+25 # ndesc
+Óscar Dropbox #nombre
+22 #id
+4 #location
+4 #coordinatex
+4 #coordinatey
+
+1 # M
+1 # P
+Do you want photocopies? #description1
+1 # M
+2 # P 
+Do you want photocopies? #description2
+1 # M
+3 # P
+Do you want photocopies? #description3
+1 # M
+4 # P
+Do you want photocopies? #description4 
+
+2 # M
+1 # P
+Someday I will hack the world. #description5
+2 # M
+2 # P
+Someday I will hack the world. #description6
+2 # M
+3 # P
+Someday I will hack the world. #description7
+
+3 # M
+1 # P
+Someday I will hack the world. #description8
+3 # M
+2 # P 
+Someday I will hack the world. #description9
+3 # M
+3 # P
+Someday I will hack the world. #description10
+
+4 # M
+1 # P
+I don't trust you. #description11
+4 # M
+2 # P 
+I don't trust you. #description12
+
+5 # M
+1 # P
+Someday I will hack the world.  #
+5 # M
+2 # P
+Someday I will hack the world.  #
+
+6 # M
+1 # P
+Someday I will hack the world.  # desc
+6 # M
+2 # P
+Someday I will hack the world.  # desc
+6 # M
+3 # P
+Someday I will hack the world.  # desc
+6 # M
+4 # P
+Someday I will hack the world.  # desc
+
+7 # M
+1 # P
+CIREL... I'm afraid... #description8
+7 # M
+2 # P 
+CIREL... I'm afraid...  #description9
+7 # M
+3 # P
+CIREL... I'm afraid...  #description10
+
+8 # M 
+1 # P
+I'M HACKING ALL THE EPS, NO ONE WOULD KNOW MY PLANS, EXCEPT THE PERSON WHO FOUND MY USB IN THE CLASSROOM 2... I WISH IS NOT RODRI # desc
+8 # M
+2 # P
+Get away, I'm hacking... # desc
+
+9 # M
+1 # P
+I HATE WINDOWSSSS. # desc
+9 # M
+2 # P
+I HATE WINDOWSSSS. # desc
+
+# Cabana
+
+25 # ndesc
+Cabana #nombre
+23 #id
+16 #location
+10 #coordinatex
+15 #coordinatey
+
+1 # M
+1 # P
+Hello, I'm Cabana :) #description1
+1 # M
+2 # P 
+Hello, I'm Cabana :) #description2
+1 # M
+3 # P
+Hello, I'm Cabana :) #description3
+1 # M
+4 # P
+Hello, I'm Cabana :) #description4 
+
+2 # M
+1 # P
+I think I'm not going to EDAT class... it's so boring. #description5
+2 # M
+2 # P
+I think I'm not going to EDAT class... it's so boring. #description6
+2 # M
+3 # P
+I think I'm not going to EDAT class... it's so boring. #description7
+
+3 # M
+1 # P
+I'm happy... #description8
+3 # M
+2 # P 
+I'm happy... #description9
+3 # M
+3 # P
+I'm happy... #description10
+
+4 # M
+1 # P
+I hate Víctor, he is silly. #description11
+4 # M
+2 # P 
+I hate Víctor, he is silly. #description12
+
+5 # M
+1 # P
+I hate Víctor, he is silly.  #
+5 # M
+2 # P
+I hate Víctor, he is silly.  #
+
+6 # M
+1 # P
+I like to eat in plaza  # desc
+6 # M
+2 # P
+I like to eat in plaza  # desc
+6 # M
+3 # P
+Sometimes I fall asleep creating weird situations :(. # desc
+6 # M
+4 # P
+Sometimes I fall asleep creating weird situations :(. # desc
+
+7 # M
+1 # P
+Sometimes I fall asleep creating weird situations :(. #description8
+7 # M
+2 # P 
+Sometimes I fall asleep creating weird situations :(.  #description9
+7 # M
+3 # P
+Sometimes I fall asleep creating weird situations :(. #description10
+
+8 # M 
+1 # P
+Sometimes I fall asleep creating weird situations :(. # desc
+8 # M
+2 # P
+Sometimes I fall asleep creating weird situations :(. # desc
+
+9 # M
+1 # P
+Are you trying to enter that super-secret factory? There is something in the library that may help. # desc
+9 # M
+2 # P
+So you finally got that charm book? now you can open ALL DOORS. # desc
+
+# David Gu
+
+25 # ndesc
+David Gu #nombre
+24 #id
+19 #location
+55 #coordinatex
+14 #coordinatey
+
+1 # M
+1 # P
+FATAL ERROR 404 NOT FOUND. #description1
+1 # M
+2 # P 
+FATAL ERROR 404 NOT FOUND.  #description2
+1 # M
+3 # P
+FATAL ERROR 404 NOT FOUND.  #description3
+1 # M
+4 # P
+FATAL ERROR 404 NOT FOUND.  #description4 
+
+2 # M
+1 # P
+FATAL ERROR 404 NOT FOUND.  #description5
+2 # M
+2 # P
+FATAL ERROR 404 NOT FOUND.  #description6
+2 # M
+3 # P
+FATAL ERROR 404 NOT FOUND.  #description7
+
+3 # M
+1 # P
+FATAL ERROR 404 NOT FOUND.  #description8
+3 # M
+2 # P 
+FATAL ERROR 404 NOT FOUND.  #description9
+3 # M
+3 # P
+FATAL ERROR 404 NOT FOUND.  #description10
+
+4 # M
+1 # P
+FATAL ERROR 404 NOT FOUND.  #description11
+4 # M
+2 # P 
+FATAL ERROR 404 NOT FOUND.  #description12
+
+5 # M
+1 # P
+FATAL ERROR 404 NOT FOUND.   #
+5 # M
+2 # P
+FATAL ERROR 404 NOT FOUND.  #
+
+6 # M
+1 # P
+FATAL ERROR 404 NOT FOUND.  # desc
+6 # M
+2 # P
+FATAL ERROR 404 NOT FOUND.  # desc
+6 # M
+3 # P
+FATAL ERROR 404 NOT FOUND. # desc
+6 # M
+4 # P
+FATAL ERROR 404 NOT FOUND. # desc
+
+7 # M
+1 # P
+FATAL ERROR 404 NOT FOUND. #description8
+7 # M
+2 # P 
+FATAL ERROR 404 NOT FOUND.  #description9
+7 # M
+3 # P
+FATAL ERROR 404 NOT FOUND. #description10
+
+8 # M 
+1 # P
+FATAL ERROR 404 NOT FOUND. # desc
+8 # M
+2 # P
+FATAL ERROR 404 NOT FOUND. # desc
+
+9 # M
+1 # P
+Hey! # desc
+9 # M
+2 # P
+This is my chemistry factory, feel free to touch everything, but don't talk with the grasshoppers pleaseeee! # desc
+
+# Grasshoppers
+
+25 # ndesc
+David Gu #nombre
+25 #id
+19 #location
+35 #coordinatex
+7 #coordinatey
+
+1 # M
+1 # P
+FATAL ERROR 404 NOT FOUND. #description1
+1 # M
+2 # P 
+FATAL ERROR 404 NOT FOUND.  #description2
+1 # M
+3 # P
+FATAL ERROR 404 NOT FOUND.  #description3
+1 # M
+4 # P
+FATAL ERROR 404 NOT FOUND.  #description4 
+
+2 # M
+1 # P
+FATAL ERROR 404 NOT FOUND.  #description5
+2 # M
+2 # P
+FATAL ERROR 404 NOT FOUND.  #description6
+2 # M
+3 # P
+FATAL ERROR 404 NOT FOUND.  #description7
+
+3 # M
+1 # P
+FATAL ERROR 404 NOT FOUND.  #description8
+3 # M
+2 # P 
+FATAL ERROR 404 NOT FOUND.  #description9
+3 # M
+3 # P
+FATAL ERROR 404 NOT FOUND.  #description10
+
+4 # M
+1 # P
+FATAL ERROR 404 NOT FOUND.  #description11
+4 # M
+2 # P 
+FATAL ERROR 404 NOT FOUND.  #description12
+
+5 # M
+1 # P
+FATAL ERROR 404 NOT FOUND.   #
+5 # M
+2 # P
+FATAL ERROR 404 NOT FOUND.  #
+
+6 # M
+1 # P
+FATAL ERROR 404 NOT FOUND.  # desc
+6 # M
+2 # P
+FATAL ERROR 404 NOT FOUND.  # desc
+6 # M
+3 # P
+FATAL ERROR 404 NOT FOUND. # desc
+6 # M
+4 # P
+FATAL ERROR 404 NOT FOUND. # desc
+
+7 # M
+1 # P
+FATAL ERROR 404 NOT FOUND. #description8
+7 # M
+2 # P 
+FATAL ERROR 404 NOT FOUND.  #description9
+7 # M
+3 # P
+FATAL ERROR 404 NOT FOUND. #description10
+
+8 # M 
+1 # P
+FATAL ERROR 404 NOT FOUND. # desc
+8 # M
+2 # P
+FATAL ERROR 404 NOT FOUND. # desc
+
+9 # M
+1 # P
+Hey! # desc
+9 # M
+2 # P
+WE WILL EAT EVERYTHING AND DESTROY THIS HORRIBLE FACTORY, WE HATE HUMAN LIFE! # desc

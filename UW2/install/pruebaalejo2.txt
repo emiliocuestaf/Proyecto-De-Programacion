@@ -1,0 +1,23 @@
+Estamos en World get space. id: 19
+numero espacios: 40
+Estamos en World get space. id: 0
+Estamos en World get space. id: 1
+Estamos en World get space. id: 2
+Estamos en World get space. id: 3
+Estamos en World get space. id: 4
+Estamos en World get space. id: 5
+Estamos en World get space. id: 6
+Estamos en World get space. id: 7
+Estamos en World get space. id: 8
+Estamos en World get space. id: 9
+Estamos en World get space. id: 10
+Estamos en World get space. id: 11
+Estamos en World get space. id: 12
+Estamos en World get space. id: 13
+Estamos en World get space. id: 14
+Estamos en World get space. id: 15
+Estamos en World get space. id: 16
+Estamos en World get space. id: 17
+Estamos en World get space. id: 18
+Estamos en World get space. id: 19
+Id coincide

@@ -1,0 +1,124 @@
+# number of comands
+# external name (comand)
+# internal name
+# number of answers
+# answers
+##### succesfuled action
+##### failed action (it could be more than one)
+##### I dont know the object
+##### stuff...?
+#
+# NUMBER OF COMANDS
+12 #
+#
+# PICK
+pick # external
+pick_i # internal
+4 # number of answers
+You can only pick "o"s. Don't try to pick non-existent objects ("*")...
+There's nothing in front of you. Unless you were trying to pick the air, it seems that you should be in AD.
+You picked
+ERROR!
+#
+#DROP
+drop # external
+drop_i # internal
+4 # number of answers
+The object "*" doesn't exist.
+You don't have "*".
+You dropped "*".
+You can't drop here. There's no space.
+#
+#TALK
+talk # external
+talk_i # internal
+4 # number of answers
+You can only talk to "@"s (face to "AT"). You know? Talking alone or to your imaginary friend ("*") is kind of creepy...
+There is no one in front of you. Maybe you should try to talk to a person (@).
+MINI ERROR: answer not associated to this mission-phase.
+ERROR!
+#
+#SING
+sing # external
+sing_i # internal
+2 # number of answers
+Now it seems that you have the level of hapiness as high as Nuria's. On the other hand singing "*" is useless.
+"* lalalalala"
+#
+#GIVE
+give # external
+give_i # internal
+4 # number of answers
+"*" doesn't exist in this universe.
+You can only give stuff from your Inventory. You don't own "*".
+You can only give stuff to "@"s (face to "AT").There is a reason to have the command drop...
+You gave "*" to
+#
+#ASKFOR
+askfor # external
+askfor_i # internal
+5 # number of answers
+"*" doesn't exist in this universe. At least it hasn't been implemented.
+You already own "*". You can't ask for it (in this universe, as others, the objects are unique).
+You can only ask for stuff to "@"s (face to "AT").You won't recieve "*" from any invisible or ethereal being. 
+doesn't own the object "*".
+gave you "*".
+#
+#OPENWITH
+openwith # external
+openwith_i # internal
+7 # number of answers
+"*" doesn't exist in this universe. At least it hasn't been implemented.
+You can only open door with stuff from your Inventory. You don't own "*".
+You can only open doors("^, v, <, >").You are not Doraemon. 
+"*" don't open doors. You fool!
+The door is already opened.
+You opened the door.
+"*" doesn't open this door.
+#
+#READ
+read # external
+read_i # internal
+4 # number of answers
+"*" doesn't exist in this universe.
+You can only read stuff from your Inventory. You don't own "*".
+You can't read "*".
+*:
+#
+#TAKE
+take # external
+take_i # internal
+4 # number of answers
+You can only take "exam"s in this universe, not "*". Blame the CoP programmer.
+You can only take exams in a classroom.
+There is no exam in this classroom today.
+You've just taken the EDAT's exam. Talk to The Great Mike (Down, Right) to compare results.
+#
+#JUMP
+jump # external
+jump_i # internal
+3 # number of answers
+Tamaño de salto superior a 2 (*).
+No son números o no es un dato válido (*).
+(*).
+#
+#GET
+get # external
+get_i # internal
+3 # number of answers
+The object "*" doesn't exist.
+You already have "*".
+You obtained "*".
+#
+#CUT
+cut # external
+cut_i # internal
+2 # number of answers
+In this universe you can only cut "Water Supply" ("*").
+There is no "*" in this room.
+#
+#ERROR
+error
+error_i
+1 # number of answers
+You don't know how to "*". Take it seriously
