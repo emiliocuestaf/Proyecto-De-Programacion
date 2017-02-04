@@ -1,4 +1,0 @@
-main
-main world creado no nulo
-interface después assert
-add_interface despues asignación

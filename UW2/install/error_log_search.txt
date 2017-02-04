@@ -1,7 +1,0 @@
-
-cmd is:talk
-pick
-drop
-talkMatch Founde
-askforMatch Foundd
-takeMatch FoundtMatch Found
